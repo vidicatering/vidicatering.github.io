@@ -6,7 +6,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         mukta: ['"Mukta"', "sans-serif"],
-        druk: ["var(--font-druk)"],
+        argent: ["var(--font-argent)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -14,6 +14,7 @@ const config: Config = {
       },
       colors: {
         vidi: "#CF9412",
+        brown: "#3B2111",
       },
     },
   },
