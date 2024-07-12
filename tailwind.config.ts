@@ -16,6 +16,15 @@ const config: Config = {
         vidi: "#CF9412",
         brown: "#3B2111",
       },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 10s linear infinite",
+      },
     },
   },
   plugins: [],
