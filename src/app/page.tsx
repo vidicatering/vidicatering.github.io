@@ -7,5 +7,4 @@ const Main = () => (
     <Hero />
   </>
 );
-<script src="./script.js"></script>;
 export default Main;
