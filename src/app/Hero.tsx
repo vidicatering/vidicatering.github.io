@@ -1,3 +1,6 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
 import VidiCatering from "/public/img/vidi1.webp";
 import Stall from "/public/img/Stall.webp";
@@ -6,14 +9,46 @@ import NasiKotak from "/public/img/NasiBox.webp";
 import Aqiqah from "/public/img/Aqiqah.webp";
 import TumpengMini from "/public/img/TumpengMini.webp";
 
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import logo from "/public/img/iso_1.png";
+
 const Hero = () => {
+  const handleDragStart = (e) => e.preventDefault();
+
+  const items = [
+    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+      <Image src={logo} alt="Client 1" className="h-24 w-auto" />
+    </div>,
+    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+      <Image src={logo} alt="Client 2" className="h-24 w-auto" />
+    </div>,
+    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+      <Image src={logo} alt="Client 3" className="h-24 w-auto" />
+    </div>,
+    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+      <Image src={logo} alt="Client 4" className="h-24 w-auto" />
+    </div>,
+    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+      <Image src={logo} alt="Client 5" className="h-24 w-auto" />
+    </div>,
+    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+      <Image src={logo} alt="Client 6" className="h-24 w-auto" />
+    </div>,
+    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+      <Image src={logo} alt="Client 7" className="h-24 w-auto" />
+    </div>,
+    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+      <Image src={logo} alt="Client 8" className="h-24 w-auto" />
+    </div>,
+  ];
   return (
     <>
       <section id="home" className="pt-20 ">
-        <div className=" h-[720px] bg-no-repeat bg-cover bg-[url('/img/bg-hero.webp')]">
-          <div className="w-full h-full bg-gradient-to-t from-white to-transparent">
-            <div className="flex flex-wrap">
-              <div className="w-full self-center pl-6 lg:pl-28 pt-20  lg:pt-[200px] space-y-2">
+        <div className=" h-screen bg-no-repeat bg-cover bg-[url('/img/bg-hero.webp')]">
+          <div className="w-full h-full bg-gradient-to-t from-white to-transparent ">
+            <div className="flex flex-wrap justify-center mx-24">
+              <div className="w-full self-center pl-6 lg:pl-28 pt-20  lg:pt-[265px] space-y-2">
                 <h1 className="font-argent  text-6xl text-vidi font-medium">
                   Memorable Event <span className="block text-brown">Memorable Catering</span>
                 </h1>
@@ -75,8 +110,8 @@ const Hero = () => {
       </section>
 
       <section>
-        <div className="min-h-screen flex items-center justify-end py-4 pl-4 pr-0">
-          <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-bl-2xl max-w-[1336px] max-h-[624px]  right-0 mr-0">
+        <div className="min-h-screen flex items-center justify-center py-4 ">
+          <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] max-h-[624px]  ">
             <div className="flex flex-col md:flex-row items-center px-20 py-14 gap-10">
               <div className="md:w-1/2 relative rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] max-w-[500px] max-h-[464px] overflow-hidden">
                 <Image src={VidiCatering} alt="Grha Sarina Vidi" className="" />
@@ -85,7 +120,7 @@ const Hero = () => {
                 <h3 className="text-2xl font-semibold text-vidi mb-2">Tentang</h3>
                 <div className="w-16 border-b-2 border-vidi mb-4"></div>
                 <h2 className="text-3xl font-bold mb-4">VIDI Catering</h2>
-                <p className="mb-4">
+                <p className="mb-4 text-justify">
                   Vidi Catering merupakan perusahaan yang bergera dalam bidang jasa boga dan hospitality service yang spesialis melayani food catering, Catering Weddding, Catering Harian, Government Tender, dan lain-lain. Dengan pengalaman
                   yang dimiliki, VIDI Group terus berkembang dengan mengutamakan kualitas, cita rasa, pelayanan, hingga kebersihan untuk memberikan kepuasan kepada konsumen setia kami. VIDI Group juga menjaga keamanan pangan dengan adanya
                   sertifikasi nasional hingga internasional.
@@ -98,36 +133,40 @@ const Hero = () => {
       <section className="">
         <div className="min-h-screen flex items-center justify-center ">
           <div className="bg-white p-6 rounded-lg max-w-7xl w-full">
-            <h2 className="text-3xl font-bold text-center mb-4">Our Offering</h2>
+            <h2 className="text-5xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
             <p className="text-center text-gray-600 mb-8">Lorem ipsum dolor sit amet consectetur. Metus sed fringilla.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-4 ">
-                <Image src={Stall} alt="Stall" className="rounded-lg mb-4 -translate-x-10 -translate-y-4" />
-                <h3 className="text-lg font-semibold">Stall</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+              <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4 ">
+                <Image src={Stall} alt="Stall" className="rounded-lg mb-4 " />
+                <h3 className="text-xl font-medium">Wedding Catering</h3>
               </div>
-              <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
+              <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
                 <Image src={Buffet} alt="Buffet" className="rounded-lg mb-4" />
-                <h3 className="text-lg font-semibold">Buffet</h3>
+                <h3 className="text-xl font-medium">Event Catering</h3>
               </div>
-              <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
+              <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
                 <Image src={NasiKotak} alt="Nasi Kotak" className="rounded-lg mb-4" />
-                <h3 className="text-lg font-semibold">Nasi Kotak</h3>
+                <h3 className="text-xl font-medium">Ballroom & Convention Hall</h3>
               </div>
-              <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
+              <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
+                <Image src={NasiKotak} alt="NasiBox" className="rounded-lg mb-4" />
+                <h3 className="text-xl font-medium">Nasi Box</h3>
+              </div>
+              <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
                 <Image src={Aqiqah} alt="Aqiqah" className="rounded-lg mb-4" />
-                <h3 className="text-lg font-semibold">Aqiqah</h3>
+                <h3 className="text-xl font-medium">Aqiqah</h3>
               </div>
-              <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
+              <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
                 <Image src={TumpengMini} alt="Tumpeng Mini" className="rounded-lg mb-4" />
-                <h3 className="text-lg font-semibold">Tumpeng Mini</h3>
+                <h3 className="text-xl font-medium">Tumpeng Mini</h3>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section>
-        <div className="min-h-screen flex items-center justify-end py-4 pl-4 pr-0">
-          <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-bl-2xl max-w-[1336px] max-h-[624px]  right-0 mr-0">
+        <div className="min-h-screen flex items-center justify-center py-4 ">
+          <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] max-h-[624px]">
             <div className="flex flex-col md:flex-row items-center px-20 py-14 gap-10">
               <div className="md:w-1/2 relative rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] max-w-[500px] max-h-[464px] overflow-hidden">
                 <Image src={VidiCatering} alt="Grha Sarina Vidi" className="" />
@@ -136,7 +175,7 @@ const Hero = () => {
                 <h3 className="text-2xl font-semibold text-vidi mb-2">Ballroom & Convention Hall</h3>
                 <div className="w-16 border-b-2 border-vidi mb-4"></div>
                 <h2 className="text-3xl font-bold mb-4">Grha Sarina Vidi</h2>
-                <p className="mb-4">
+                <p className="mb-4 text-justify">
                   Berdiri sejak tahun 2003 Grha Sarina Vidi mampu menampung kapasitas tamu undangan sebanyak 1500 di setiap acara. Dengan fasilitas yang mendukung yang di sediakan GSV dan dibantu Vidi Catering yang sudah berpengalaman lebih
                   dari 38 tahun Sehingga mampu menyajikan Fasilitas dan jasa boga secara profesional yang membuat pesta pernikahhan ataupun (MICT) Meeting, Incentive, Convention, & Exhibition terasa mewah.
                 </p>
@@ -145,6 +184,23 @@ const Hero = () => {
           </div>
         </div>
       </section>
+      <div className=" flex flex-col items-center justify-center p-4">
+        <div className="bg-white p-6 rounded-lg max-w-7xl w-full">
+          <h2 className="text-3xl font-bold text-center mb-8">Our Clients</h2>
+          <AliceCarousel
+            mouseTracking
+            items={items}
+            responsive={{
+              0: { items: 1 },
+              568: { items: 2 },
+              1024: { items: 4 },
+            }}
+            autoPlay
+            autoPlayInterval={3000}
+            disableButtonsControls={true}
+          />
+        </div>
+      </div>
     </>
   );
 };
