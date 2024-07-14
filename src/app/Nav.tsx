@@ -1,7 +1,11 @@
+import Script from "next/script";
+import React, { useEffect } from "react";
+import Link from "next/link";
+
 const Nav = () => {
   return (
     <>
-      <script src="/js/script.js"></script>
+      <Script src="/js/script.js" />
       <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 my-0">
         <div className="container mx-auto">
           <div className="flex items-center justify-between relative">
