@@ -54,7 +54,7 @@ const Hero = () => {
                 </h1>
                 <h2 className="text-vidi font-normal text-xl">~ With Vidi Catering ~</h2>
                 <p className="text-brown italic text-xl">
-                  Experience the Best with VIDI's Commitment <br /> to Quality on Your Special Day
+                  Experience the Best with VIDI Commitment <br /> to Quality on Your Special Day
                 </p>
                 <button id="" className="bg-vidi rounded-full px-4 py-2 text-white text-lg font-semibold hover:opacity-90">
                   <a href="#" className="">
