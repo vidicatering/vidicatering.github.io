@@ -150,7 +150,7 @@ const Hero = () => {
         </div>
       </section>
       <section className="">
-        <div className="min-h-screen flex items-center justify-center ">
+        <div className=" flex items-center justify-center ">
           <div className="bg-white p-6 rounded-lg max-w-7xl w-full">
             <h2 className="text-5xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
             <p className="text-center text-gray-600 mb-8">Lorem ipsum dolor sit amet consectetur. Metus sed fringilla.</p>
