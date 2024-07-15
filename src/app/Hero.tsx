@@ -42,6 +42,25 @@ const Hero = () => {
       <Image src={logo} alt="Client 8" className="h-24 w-auto" />
     </div>,
   ];
+
+  const testimonials = [
+    {
+      name: "Elia Nang",
+      feedback: "Catering yang legend dari saya masih kecil. Semua menu saya sukai, karyawannya juga ramah, pelayanan memuaskan, tidak ragu untuk pesan & menggunakan jasa cateringnya lagi. Semoga lebih maju & lebih berkembang lagi. ",
+    },
+    {
+      name: "Anita Chandra",
+      feedback: "Salah satu catering endul di jogja ya. Worth the money banget untuk rasa dan jenis makanan yang di tawarkan. Marketingnya ramah, ibu ownernya juga ramah, pemesanan banyak free ongkir kok",
+    },
+    {
+      name: "Arsisca Yulyant",
+      feedback: "Makan di atas bus Pandawa 87 acara family gathering pake vidi katering pun terasa nikmaattt",
+    },
+    {
+      name: "Vida",
+      feedback: "Masakannya enak, sehat, bersih dan pelayanannya baik,belum lagi harga terjangkau.... Jadi pengen mesen masakannya lagi",
+    },
+  ];
   return (
     <>
       <section id="home" className="pt-20 ">
@@ -174,7 +193,7 @@ const Hero = () => {
               <div className="md:w-1/2 md:pl-6 mt-4 md:mt-0">
                 <h3 className="text-2xl font-semibold text-vidi mb-2">Ballroom & Convention Hall</h3>
                 <div className="w-16 border-b-2 border-vidi mb-4"></div>
-                <h2 className="text-3xl font-bold mb-4">Grha Sarina Vidi</h2>
+                <h2 className="text-4xl font-bold mb-4">Grha Sarina Vidi</h2>
                 <p className="mb-4 text-justify">
                   Berdiri sejak tahun 2003 Grha Sarina Vidi mampu menampung kapasitas tamu undangan sebanyak 1500 di setiap acara. Dengan fasilitas yang mendukung yang di sediakan GSV dan dibantu Vidi Catering yang sudah berpengalaman lebih
                   dari 38 tahun Sehingga mampu menyajikan Fasilitas dan jasa boga secara profesional yang membuat pesta pernikahhan ataupun (MICT) Meeting, Incentive, Convention, & Exhibition terasa mewah.
@@ -202,20 +221,38 @@ const Hero = () => {
         </div>
       </div>
       <section>
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg max-w-7xl w-ful">
-            <h2 className="text-5xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
-            <p className="text-center text-gray-600 mb-8">Lorem ipsum dolor sit amet consectetur. Metus sed fringilla.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
-              <div className="flex flex-col items-center bg-white rounded-xl hover:shadow-xl hover:duration-500 p-8 bg-gradient-to-tr from-bg_vidi">
-                <h1>Sarah Jonson</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit debitis eveniet dolorum saepe maiores corrupti expedita, rerum laborum quidem itaque, quisquam sapiente totam nobis laudantium reprehenderit minima tenetur
-                  doloribus laboriosam.
-                </p>
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-bg_vidi to-transparent">
+          <div className="grid grid-cols-2 gap-1 max-w-7xl w-full items-center justify-center ">
+            <div className="">
+              <h3 className="text-lg"> Testimoni</h3>
+              <div className="w-20 border-b-2 border-vidi mb-3"></div>
+              <h1 className="text-6xl mb-4 font-semibold">Read From Our Satisfied Clients.</h1>
+              <p className="text-lg">
+                Discover what our satisfied customers have to say <br /> about their experiences with our product/services
+              </p>
+            </div>
+            <div className=" ">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-8 justify-center">
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className=" bg-white shadow-lg lg p-8 rounded-2xl h-80  ">
+                    <div className="flex items-center mb-4 ">
+                      <div className=" text-justify">
+                        <h3 className="text-2xl font-semibold">{testimonial.name}</h3>
+                      </div>
+                    </div>
+                    <p className="text-gray-500">{testimonial.feedback}</p>
+                  </div>
+                ))}
               </div>
-              <div className="flex flex-col items-center bg-white rounded-xl shadow-md p-4"></div>
-              <div className="flex flex-col items-center bg-white rounded-xl shadow-md p-4"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="min-h-screen flex bg-slate-300 justify-center items-center">
+          <div className="max-w-7xl w-full bg-white shadow-2xl min-h-52 rounded-full">
+            <div>
+              <h1>Fuck</h1>
             </div>
           </div>
         </div>
