@@ -7,9 +7,9 @@ const Nav = () => {
     <>
       <Script src="/js/script.js" />
       <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 my-0">
-        <div className="container mx-auto">
+        <div className="container mx-32 ">
           <div className="flex items-center justify-between relative">
-            <div className="px-4">
+            <div className="">
               <a href="#home">
                 <img src="/img/vidi_logo.png" alt="Logo Vidi" className="w-36 m-auto" />
               </a>
