@@ -201,6 +201,25 @@ const Hero = () => {
           />
         </div>
       </div>
+      <section>
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg max-w-7xl w-ful">
+            <h2 className="text-5xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
+            <p className="text-center text-gray-600 mb-8">Lorem ipsum dolor sit amet consectetur. Metus sed fringilla.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+              <div className="flex flex-col items-center bg-white rounded-xl hover:shadow-xl hover:duration-500 p-8 bg-gradient-to-tr from-bg_vidi">
+                <h1>Sarah Jonson</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit debitis eveniet dolorum saepe maiores corrupti expedita, rerum laborum quidem itaque, quisquam sapiente totam nobis laudantium reprehenderit minima tenetur
+                  doloribus laboriosam.
+                </p>
+              </div>
+              <div className="flex flex-col items-center bg-white rounded-xl shadow-md p-4"></div>
+              <div className="flex flex-col items-center bg-white rounded-xl shadow-md p-4"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

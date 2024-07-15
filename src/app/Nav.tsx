@@ -46,7 +46,6 @@ const Nav = () => {
                   <li className="group">
                     <button className="font-argent bg-vidi rounded-full hover:opacity-90 mx-4 ">
                       <a href="" className="text-white py-2 mx-8 flex ">
-                        {" "}
                         Contact
                       </a>
                     </button>
