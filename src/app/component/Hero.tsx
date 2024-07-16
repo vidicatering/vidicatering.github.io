@@ -8,7 +8,7 @@ import EventCatering from "/public/img/eventCatering.webp";
 import NasiKotak from "/public/img/NasiBox.webp";
 import Aqiqah from "/public/img/Aqiqah.webp";
 import TumpengMini from "/public/img/TumpengMini.webp";
-import Gallery from "./component/Gallery";
+import Gallery from "./Gallery";
 
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";

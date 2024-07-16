@@ -24,14 +24,14 @@ const Nav = () => {
               <nav id="nav-menu" className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[320px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                 <ul className="block lg:flex">
                   <li className="group">
-                    <a href="#home" className="text-base py-2 mx-8 flex group-hover:text-vidi">
+                    <Link href="/" className="text-base py-2 mx-8 flex group-hover:text-vidi">
                       Beranda
-                    </a>
+                    </Link>
                   </li>
                   <li className="group">
-                    <a href="#catering-service" className="text-base py-2 mx-8 flex group-hover:text-vidi">
+                    <Link href="/wedding-catering" className="text-base py-2 mx-8 flex group-hover:text-vidi">
                       Catering Service
-                    </a>
+                    </Link>
                   </li>
                   <li className="group">
                     <a href="#ballroom-convention-hall" className="font- text-base py-2 mx-8 flex group-hover:text-vidi">
