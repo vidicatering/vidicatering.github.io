@@ -1,8 +1,11 @@
+"use client";
 import Script from "next/script";
 import React, { useEffect } from "react";
 import Link from "next/link";
+import { useState } from "react";
 
 const Nav = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
       <Script src="/js/script.js" />
@@ -20,7 +23,6 @@ const Nav = () => {
                 <span className="hamburger-line transition duration-300 ease-in-out "></span>
                 <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
               </button>
-
               <nav id="nav-menu" className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[320px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                 <ul className="block lg:flex">
                   <li className="group">
@@ -28,15 +30,26 @@ const Nav = () => {
                       Beranda
                     </Link>
                   </li>
-                  <li className="group">
-                    <Link href="/wedding-catering" className="text-base py-2 mx-8 flex group-hover:text-vidi">
-                      Catering Service
-                    </Link>
+                  <li onClick={() => setDropdownOpen(!dropdownOpen)} className="group">
+                    <button className="text-base py-2 mx-8 flex group-hover:text-vidi ">Catering Service</button>
+                    {dropdownOpen && (
+                      <div className="absolute  mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 ">
+                        <Link href="/wedding-catering" className="block px-4 py-2 hover:text-vidi ">
+                          Wedding Service
+                        </Link>
+                        <a href="#" className="block px-4 py-2 hover:text-vidi ">
+                          Link2
+                        </a>
+                        <a href="#" className="block px-4 py-2 hover:text-vidi ">
+                          Link 3
+                        </a>
+                      </div>
+                    )}
                   </li>
                   <li className="group">
-                    <a href="#ballroom-convention-hall" className="font- text-base py-2 mx-8 flex group-hover:text-vidi">
-                      Ballroom & Convention Hall
-                    </a>
+                    <Link href="/ballroom-convention-hall" className="block px-4 py-2 hover:text-vidi ">
+                      Ballroom Convention Hall
+                    </Link>
                   </li>
                   <li className="group">
                     <a href="#about" className="text-base py-2 mx-8 flex group-hover:text-vidi">
