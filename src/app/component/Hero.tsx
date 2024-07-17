@@ -20,47 +20,37 @@ const AliceCarousel = dynamic(() => import("react-alice-carousel"), { ssr: false
 const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => e.preventDefault();
 
 const items = [
-  <div key="1" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-    <Image src={logo} alt="Client 1" className="h-24 w-auto" />
-  </div>,
-  <div key="2" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-    <Image src={logo} alt="Client 2" className="h-24 w-auto" />
-  </div>,
-  <div key="3" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-    <Image src={logo} alt="Client 3" className="h-24 w-auto" />
-  </div>,
-  <div key="4" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-    <Image src={logo} alt="Client 4" className="h-24 w-auto" />
-  </div>,
-  <div key="5" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-    <Image src={logo} alt="Client 5" className="h-24 w-auto" />
-  </div>,
-  <div key="6" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-    <Image src={logo} alt="Client 6" className="h-24 w-auto" />
-  </div>,
-  <div key="7" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-    <Image src={logo} alt="Client 7" className="h-24 w-auto" />
-  </div>,
-  <div key="8" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-    <Image src={logo} alt="Client 8" className="h-24 w-auto" />
-  </div>,
-];
+  { id: 1, src: logo, alt: "Client 1" },
+  { id: 2, src: logo, alt: "Client 2" },
+  { id: 3, src: logo, alt: "Client 3" },
+  { id: 4, src: logo, alt: "Client 4" },
+  { id: 5, src: logo, alt: "Client 5" },
+  { id: 6, src: logo, alt: "Client 6" },
+  { id: 7, src: logo, alt: "Client 7" },
+  { id: 8, src: logo, alt: "Client 8" },
+].map((item) => (
+  <div key={item.id} className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+    <Image src={item.src} alt={item.alt} className="h-24 w-auto" />
+  </div>
+));
 
 const testimonials = [
   {
+    id: 1,
     name: "Elia Nang",
-    feedback: "Catering yang legend dari saya masih kecil. Semua menu saya sukai, karyawannya juga ramah, pelayanan memuaskan, tidak ragu untuk pesan & menggunakan jasa cateringnya lagi. ",
+    feedback: "Catering yang legend dari saya masih kecil. Semua menu saya sukai, karyawannya juga ramah, pelayanan memuaskan, tidak ragu untuk pesan & menggunakan jasa cateringnya lagi.",
   },
   {
+    id: 2,
     name: "Anita Chandra",
     feedback: "Worth the money banget untuk rasa dan jenis makanan yang di tawarkan. Marketingnya ramah, ibu ownernya juga ramah, pemesanan banyak free ongkir kok",
   },
   {
+    id: 3,
     name: "Arsisca Yulyant",
     feedback: "Makan di atas bus Pandawa 87 acara family gathering pake vidi katering pun terasa nikmaattt",
   },
 ];
-
 const Hero = () => {
   return (
     <>
