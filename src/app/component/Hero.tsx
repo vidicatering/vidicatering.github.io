@@ -58,6 +58,7 @@ const Hero = () => {
       feedback: "Makan di atas bus Pandawa 87 acara family gathering pake vidi katering pun terasa nikmaattt",
     },
   ];
+
   return (
     <>
       <div className=" h-screen bg-no-repeat bg-cover bg-[url('/img/bg-hero.webp')] pt-20 ">
