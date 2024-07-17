@@ -17,33 +17,6 @@ import logo from "/public/img/iso_1.png";
 const Hero = () => {
   const handleDragStart = (e) => e.preventDefault();
 
-  const items = [
-    <div key="1" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-      <Image src={logo} alt="Client 1" className="h-24 w-auto" />
-    </div>,
-    <div key="2" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-      <Image src={logo} alt="Client 2" className="h-24 w-auto" />
-    </div>,
-    <div key="3" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-      <Image src={logo} alt="Client 3" className="h-24 w-auto" />
-    </div>,
-    <div key="4" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-      <Image src={logo} alt="Client 4" className="h-24 w-auto" />
-    </div>,
-    <div key="5" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-      <Image src={logo} alt="Client 5" className="h-24 w-auto" />
-    </div>,
-    <div key="6" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-      <Image src={logo} alt="Client 6" className="h-24 w-auto" />
-    </div>,
-    <div key="7" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-      <Image src={logo} alt="Client 7" className="h-24 w-auto" />
-    </div>,
-    <div key="8" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-      <Image src={logo} alt="Client 8" className="h-24 w-auto" />
-    </div>,
-  ];
-
   const testimonials = [
     {
       name: "Elia Nang",
@@ -188,24 +161,6 @@ const Hero = () => {
               </p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className=" flex flex-col items-center justify-center mx-32 h-28">
-        <div className="bg-white p-6 rounded-lg max-w-7xl w-full">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Clients</h2>
-          <AliceCarousel
-            mouseTracking
-            items={items}
-            responsive={{
-              0: { items: 1 },
-              568: { items: 2 },
-              1024: { items: 4 },
-            }}
-            autoPlay
-            autoPlayInterval={3000}
-            disableButtonsControls={true}
-          />
         </div>
       </div>
 
