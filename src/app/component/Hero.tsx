@@ -18,28 +18,28 @@ const Hero = () => {
   const handleDragStart = (e) => e.preventDefault();
 
   const items = [
-    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+    <div key="1" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
       <Image src={logo} alt="Client 1" className="h-24 w-auto" />
     </div>,
-    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+    <div key="2" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
       <Image src={logo} alt="Client 2" className="h-24 w-auto" />
     </div>,
-    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+    <div key="3" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
       <Image src={logo} alt="Client 3" className="h-24 w-auto" />
     </div>,
-    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+    <div key="4" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
       <Image src={logo} alt="Client 4" className="h-24 w-auto" />
     </div>,
-    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+    <div key="5" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
       <Image src={logo} alt="Client 5" className="h-24 w-auto" />
     </div>,
-    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+    <div key="6" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
       <Image src={logo} alt="Client 6" className="h-24 w-auto" />
     </div>,
-    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+    <div key="7" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
       <Image src={logo} alt="Client 7" className="h-24 w-auto" />
     </div>,
-    <div className="flex justify-center" onDragStart={handleDragStart} role="presentation">
+    <div key="8" className="flex justify-center" onDragStart={handleDragStart} role="presentation">
       <Image src={logo} alt="Client 8" className="h-24 w-auto" />
     </div>,
   ];
@@ -235,7 +235,6 @@ const Hero = () => {
       <div className="bg-gradient-to-b from-bg_vidi to-white">
         <Contact />
       </div>
-
       <div>
         <Gallery />
       </div>
