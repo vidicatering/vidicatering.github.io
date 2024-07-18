@@ -6,13 +6,14 @@ import dynamic from "next/dynamic";
 import VidiCatering from "/public/img/vidi1.webp";
 import WeddingCatering from "/public/img/weddingcatering.webp";
 import EventCatering from "/public/img/eventCatering.webp";
-import NasiKotak from "/public/img/NasiBox.webp";
-import Aqiqah from "/public/img/Aqiqah.webp";
-import TumpengMini from "/public/img/TumpengMini.webp";
+import NasiKotak from "/public/img/nasibox.webp";
+import Hampers from "/public/img/hampers.webp";
+import TumpengMini from "/public/img/tumpengmini.webp";
 import Gallery from "./Gallery";
 import Contact from "./Contact";
 import "react-alice-carousel/lib/alice-carousel.css";
 import logo from "/public/img/iso_1.png";
+import Ballroom from "/public/img/ballroom.webp";
 
 // Load AliceCarousel dynamically
 const AliceCarousel = dynamic(() => import("react-alice-carousel"), { ssr: false });
@@ -144,7 +145,7 @@ const Hero = () => {
               <h3 className="text-xl font-medium">Event Catering</h3>
             </div>
             <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
-              <Image src={NasiKotak} alt="Nasi Kotak" className="rounded-3xl mb-4 hover:shadow-xl hover:scale-105 duration-700" />
+              <Image src={Ballroom} alt="Nasi Kotak" className="rounded-3xl mb-4 hover:shadow-xl hover:scale-105 duration-700" />
               <h3 className="text-xl font-medium">Ballroom & Convention Hall</h3>
             </div>
             <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
@@ -152,8 +153,8 @@ const Hero = () => {
               <h3 className="text-xl font-medium">Nasi Box</h3>
             </div>
             <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
-              <Image src={Aqiqah} alt="Aqiqah" className="rounded-3xl mb-4 hover:shadow-xl hover:scale-105 duration-700" />
-              <h3 className="text-xl font-medium">Aqiqah</h3>
+              <Image src={Hampers} alt="Aqiqah" className="rounded-3xl mb-4 hover:shadow-xl hover:scale-105 duration-700" />
+              <h3 className="text-xl font-medium">Hampers</h3>
             </div>
             <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
               <Image src={TumpengMini} alt="Tumpeng Mini" className="rounded-3xl mb-4 hover:shadow-xl hover:scale-105 duration-700" />
@@ -166,8 +167,8 @@ const Hero = () => {
       <div className="min-h-screen flex items-center justify-center my-0 mx-32">
         <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] max-h-[624px]">
           <div className="flex flex-col md:flex-row items-center px-20 py-14 gap-10">
-            <div className="md:w-1/2 relative rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] max-w-[500px] max-h-[464px] overflow-hidden">
-              <Image src={VidiCatering} alt="Grha Sarina Vidi" className="" />
+            <div className="md:w-1/2 relative rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] max-w-[445px] max-h-[372px] overflow-hidden">
+              <Image src={Ballroom} alt="Grha Sarina Vidi" className="" />
             </div>
             <div className="md:w-1/2 md:pl-6 mt-4 md:mt-0">
               <h3 className="text-2xl font-semibold text-vidi mb-2">Ballroom & Convention Hall</h3>

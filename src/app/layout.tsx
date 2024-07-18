@@ -4,6 +4,7 @@ import "./globals.css";
 import localfont from "next/font/local";
 import React from "react";
 import Nav from "./component/Nav"; // Pastikan path ke komponen Nav benar
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const argent = localfont({
   src: [
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Nav /> {/* Pindahkan Nav ke sini jika ingin global */}
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

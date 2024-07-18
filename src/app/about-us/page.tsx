@@ -13,47 +13,61 @@ import Syukuran from "/public/img/Syukuran.webp";
 import Gallery from "../component/Gallery";
 import Contact from "../component/Contact";
 import Footer from "../component/Footer";
-import GSV from "/public/img/gsv.webp";
+import aboutus from "/public/img/about_us.webp";
 
-const WeddingCatering = () => {
+const about_us = () => {
   return (
     <div>
       <Nav />
-      <div className=" h-screen bg-no-repeat bg-cover bg-[url('/img/GrhaSarinaVidi.webp')] pt-20 ">
-        <div className="h-full ">
-          <div className="flex flex-col justify-center w-full space-y-2 h-full px-32">
-            <h1 className="font-argent text-7xl text-vidi font-medium">Grha Sarina Vidi</h1>
-            <h2 className="text-brown font-medium font-argent text-3xl">Ballroom and Convention Hall</h2>
-            <button id="" className="bg-vidi rounded-lg w-max px-6 py-2 text-white text-lg font-semibold hover:opacity-90">
-              <a href="#" className="">
-                Pricelist Grha Sarina Vidi
-              </a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="min-h-max bg-gradient-to-t from-white via-bg_vidi to-white flex justify-center items-center py-28">
-        <div className="grid grid-cols-3 gap-24 mx-32">
-          <div className="bg-white rounded-xl flex  max-h-max items-center  gap-6 px-4 py-4 min-w-96">
-            <div className="w-20 h-20 bg-gray-100"></div>
-            <div className="text-xl font-semibold text-vidi">
-              <h1>Fasilitas Lengkap</h1>
-            </div>
-          </div>
-          <div className="bg-white rounded-xl flex  min-w-96 max-h-max items-center gap-6 px-4 ">
-            <div className="w-20 h-20 bg-gray-100"></div>
-            <div className="text-xl font-semibold text-vidi">
-              <h1>2500+ Tamu</h1>
-            </div>
-          </div>
-          <div className="bg-white rounded-xl  flex min-w-96 max-h-max items-center gap-6 px-4">
-            <div className="w-20 h-20 bg-gray-100"></div>
-            <div className="text-xl font-semibold text-vidi">
-              <h1>Akses Mudah</h1>
+      <div className=" h-[450px] bg-no-repeat bg-cover bg-[url('/img/about_us.webp')] pt-20 ">
+        <div className="h-full bg-white bg-opacity-30">
+          <div className="h-full bg-gradient-to-t from-white to-100% ">
+            <div className="flex flex-col justify-center items-center w-full space-y-2 h-full pt-20">
+              <h1 className="font-argent text-7xl text-vidi font-medium drop-shadow-2xl">About Us</h1>
             </div>
           </div>
         </div>
       </div>
+      <div className="min-h-max flex items-center justify-center mb-10 mt-14 mx-32">
+        <div className=" p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] w-[1336px] h-max flex flex-col items-center py-10 px-8">
+          <h1 className="text-brown text-5xl font-argent mb-7">Ikhtisar Perusahaan</h1>
+          <p className="font-argent text-xl text-center">
+            VIDI Group merupakan perusahaan yang bergerak dalam bidang jasa boga dan hospitality service yang menjadi spesialis dalam melayani food catering, wedding, gathering, meeting, corporate catering, government tender, dan lain lain.
+            Dengan pengalaman yang dimiliki, VIDI Group terus berkembang dengan mengutamakan kualitas, cita rasa, pelayanan, hingga kebersihan untuk memberikan kepuasan kepada konsumen setia kami. VIDI Group juga menjaga keamanan pangan
+            dengan adanya sertifikasi nasional hingga internasional.
+          </p>
+        </div>
+      </div>
+      <div className="min-h-max bg-white w-full flex flex-col justify-center items-center pb-32 pt-10 gap-10">
+        <div className="min-h-max grid grid-cols-2 justify-center items-center gap-10">
+          <div className="flex flex-col text-center justify-center h-max w-[500px] bg-white shadow-2xl rounded-xl px-8 py-10">
+            <h1 className="text-brown text-4xl font-argent mb-4">VISI</h1>
+            <p className="font-argent text-lg">
+              Menjadikan VIDI Group sebagai perusahaan jasa boga terbaik di Indonesia dimana semua orang bisa mendapatkan jasa catering, pelayanan, dan keamanan pangan yang terbaik dengan harga terjangkau.
+            </p>
+          </div>
+          <div className="flex flex-col text-center justify-center h-max w-[500px] bg-white shadow-2xl rounded-xl px-8 py-9">
+            <h1 className="text-brown text-4xl font-argent mb-4">MISI</h1>
+            <p className="font-argent text-lg">Menyajikan makanan dan pelayanan yang berkualitas dengan keamanan pangan yang terjamin dan harga terjangkau agar konsumen mendapatkan pengalaman terbaik di momen berharga.</p>
+          </div>
+        </div>
+        <div className="min-h-max bg-black justify-center items-center">
+          <div className="flex flex-col text-center justify-center h-max w-full bg-white shadow-2xl rounded-xl mx-20 py-10">
+            <h1 className="text-brown text-4xl font-argent mb-4">VISI</h1>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-max bg-white w-full flex justify-center items-center pb-32 pt-10">
+        <div className="min-h-max grid grid-cols-1 justify-center items-center gap-10">
+          <div className="flex flex-col text-center justify-center h-max bg-white shadow-2xl rounded-xl mx-36 py-10">
+            <h1 className="text-brown text-4xl font-argent mb-4">VISI</h1>
+            <p className="font-argent text-lg">
+              Menjadikan VIDI Group sebagai perusahaan jasa boga terbaik di Indonesia dimana semua orang bisa mendapatkan jasa catering, pelayanan, dan keamanan pangan yang terbaik dengan harga terjangkau.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className=" flex items-center justify-center ">
         <div className="bg-white p-6 rounded-lg max-w-7xl w-full mx-32">
           <h2 className="text-5xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
@@ -111,4 +125,4 @@ const WeddingCatering = () => {
   );
 };
 
-export default WeddingCatering;
+export default about_us;

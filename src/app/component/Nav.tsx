@@ -48,13 +48,13 @@ const Nav = () => {
                   </li>
                   <li className="group">
                     <Link href="/ballroom-convention-hall" className="block px-4 py-2 hover:text-vidi ">
-                      Ballroom Convention Hall
+                      Ballroom & Convention Hall
                     </Link>
                   </li>
                   <li className="group">
-                    <a href="#about" className="text-base py-2 mx-8 flex group-hover:text-vidi">
-                      About
-                    </a>
+                    <Link href="/about-us" className="text-base py-2 mx-8 flex group-hover:text-vidi">
+                      About Us
+                    </Link>
                   </li>
                   <li className="group">
                     <button className="font-argent bg-vidi rounded-full hover:opacity-90 mx-4 ">

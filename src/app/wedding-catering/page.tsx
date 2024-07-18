@@ -18,7 +18,7 @@ const WeddingCatering = () => {
     <div>
       <Nav />
       <div className=" h-screen bg-no-repeat bg-cover bg-[url('/img/wedding-catering.webp')] pt-20 ">
-        <div className="h-full bg-gradient-to-t from-white to-transparent">
+        <div className="h-full ">
           <div className="flex flex-col justify-center w-full space-y-2 h-full px-32">
             <h1 className="font-argent text-6xl text-vidi font-medium">
               Memorable Wedding <span className="block text-brown">Memorable Catering</span>
