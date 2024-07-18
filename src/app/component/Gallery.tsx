@@ -3,9 +3,9 @@ import Image from "next/image";
 import VidiCatering from "/public/img/vidi1.webp";
 import Stall from "/public/img/Stall.webp";
 import Buffet from "/public/img/Buffet.webp";
-import NasiKotak from "/public/img/nasibox.webp";
+import NasiKotak from "/public/img/nasi_box.webp";
 import Aqiqah from "/public/img/Aqiqah.webp";
-import TumpengMini from "/public/img/tumpengmini.webp";
+import TumpengMini from "/public/img/tumpeng_mini.webp";
 
 const Gallery = () => {
   return (
