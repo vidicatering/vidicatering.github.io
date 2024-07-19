@@ -14,41 +14,51 @@ import Gallery from "../component/Gallery";
 import Contact from "../component/Contact";
 import Footer from "../component/Footer";
 import GSV from "/public/img/gsv.webp";
+import Link from "next/link";
+import Hall from "/public/img/hall.webp";
+import Youth from "/public/img/youth.webp";
+import map from "/public/img/map.webp";
 
 const WeddingCatering = () => {
   return (
     <div>
       <Nav />
       <div className=" h-screen bg-no-repeat bg-cover bg-[url('/img/GrhaSarinaVidi.webp')] pt-20 ">
-        <div className="h-full ">
+        <div className="h-full bg-gradient-to-t from-white via-transparent to-transparent ">
           <div className="flex flex-col justify-center w-full space-y-2 h-full px-32">
             <h1 className="font-argent text-7xl text-vidi font-medium">Grha Sarina Vidi</h1>
             <h2 className="text-brown font-medium font-argent text-3xl">Ballroom and Convention Hall</h2>
             <button id="" className="bg-vidi rounded-lg w-max px-6 py-2 text-white text-lg font-semibold hover:opacity-90">
-              <a href="#" className="">
+              <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="">
                 Pricelist Grha Sarina Vidi
-              </a>
+              </Link>
             </button>
           </div>
         </div>
       </div>
       <div className="min-h-max bg-gradient-to-t from-white via-bg_vidi to-white flex justify-center items-center py-28">
-        <div className="grid grid-cols-3 gap-24 mx-32">
-          <div className="bg-white rounded-xl flex  max-h-max items-center  gap-6 px-4 py-4 min-w-96">
-            <div className="w-20 h-20 bg-gray-100"></div>
-            <div className="text-xl font-semibold text-vidi">
+        <div className="grid grid-cols-3 gap-10 mx-32">
+          <div className="bg-white rounded-xl shadow-2xl shadow-bg_vidi flex min-w-28 max-h-max items-center gap-6 px-8 py-4">
+            <div className="w-20 h-20 ">
+              <Image src={Hall} alt="Grha Sarina Vidi" className=" drop-shadow-xl" />
+            </div>
+            <div className="text-2xl font-semibold text-vidi">
               <h1>Fasilitas Lengkap</h1>
             </div>
           </div>
-          <div className="bg-white rounded-xl flex  min-w-96 max-h-max items-center gap-6 px-4 ">
-            <div className="w-20 h-20 bg-gray-100"></div>
-            <div className="text-xl font-semibold text-vidi">
+          <div className="bg-white rounded-xl shadow-2xl shadow-bg_vidi flex min-w-28 max-h-max items-center gap-6 px-8 py-4">
+            <div className="w-20 h-20 ">
+              <Image src={Youth} alt="Grha Sarina Vidi" className=" drop-shadow-xl" />
+            </div>
+            <div className="text-2xl font-semibold text-vidi">
               <h1>2500+ Tamu</h1>
             </div>
           </div>
-          <div className="bg-white rounded-xl  flex min-w-96 max-h-max items-center gap-6 px-4">
-            <div className="w-20 h-20 bg-gray-100"></div>
-            <div className="text-xl font-semibold text-vidi">
+          <div className="bg-white rounded-xl shadow-2xl shadow-bg_vidi flex min-w-28 max-h-max items-center gap-6 px-8 py-4">
+            <div className="w-20 h-20 ">
+              <Image src={map} alt="Grha Sarina Vidi" className="" />
+            </div>
+            <div className="text-2xl font-semibold text-vidi">
               <h1>Akses Mudah</h1>
             </div>
           </div>
@@ -57,7 +67,7 @@ const WeddingCatering = () => {
       <div className=" flex items-center justify-center ">
         <div className="bg-white p-6 rounded-lg max-w-7xl w-full mx-32">
           <h2 className="text-5xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
-          <p className="text-center text-gray-600 mb-8">Lorem ipsum dolor sit amet consectetur. Metus sed fringilla.</p>
+          <p className="text-2xl text-center text-brown my-4 mb-10">Mendapatkan pelayanan terbaik dengan harga terjangkau adalah hak setiap orang.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
             <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4 ">
               <Image src={Wedding} alt="Stall" className="rounded-3xl mb-4 hover:shadow-xl hover:scale-105 duration-700" />

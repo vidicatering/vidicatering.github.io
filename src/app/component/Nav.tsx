@@ -10,7 +10,7 @@ const Nav = () => {
     <>
       <Script src="/js/script.js" />
       <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 my-0 bg-white">
-        <div className="container mx-32 ">
+        <div className="container lg:mx-32 md:mx-32 ">
           <div className="flex items-center justify-between relative">
             <div className="">
               <a href="#home">
@@ -57,10 +57,10 @@ const Nav = () => {
                     </Link>
                   </li>
                   <li className="group">
-                    <button className="font-argent bg-vidi rounded-full hover:opacity-90 mx-4 ">
-                      <a href="" className="text-white py-2 mx-8 flex ">
-                        Contact
-                      </a>
+                    <button className=" bg-vidi rounded-xl hover:opacity-90 mx-4 ">
+                      <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
+                        Hubungi Kami
+                      </Link>
                     </button>
                   </li>
                 </ul>

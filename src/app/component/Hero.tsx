@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -66,7 +67,9 @@ const Hero = () => {
               Experience the Best with VIDI Commitment <br /> to Quality on Your Special Day
             </p>
             <button className="bg-vidi rounded-lg w-max px-6 py-2 text-white text-lg font-semibold hover:opacity-90">
-              <a href="#">Pricelist VIDI Catering</a>
+              <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="">
+                Pricelist VIDI Catering
+              </Link>
             </button>
           </div>
         </div>
@@ -74,7 +77,7 @@ const Hero = () => {
 
       <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-no-repeat bg-cover bg-[url('/img/indonesia.webp')] text-gray-800">
         <h1 className="text-5xl font-bold text-yellow-600 mb-5">Mengapa Harus VIDI?</h1>
-        <p className="mb-14 text-center text-xl">Satu-satunya catering di Yogyakarta dan Jawa Tengah yang memiliki 4 standar ISO.</p>
+        <p className="mb-14 text-center text-2xl text-brown">Satu-satunya catering di Yogyakarta dan Jawa Tengah yang memiliki 4 standar ISO.</p>
         <div className="flex flex-wrap justify-center mb-8">
           <div className="bg-white shadow-xl rounded-xl p-6 m-4 w-64 text-center">
             <h2 className="text-xl font-bold mb-2">Sertifikat Halal</h2>
@@ -134,7 +137,7 @@ const Hero = () => {
       <div className="flex items-center justify-center">
         <div className="bg-white p-6 rounded-lg max-w-7xl w-full mx-32">
           <h2 className="text-5xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
-          <p className="text-center text-gray-600 mb-8">Lorem ipsum dolor sit amet consectetur. Metus sed fringilla.</p>
+          <p className="text-2xl text-center text-brown my-4 mb-10">Mendapatkan pelayanan catering terbaik dengan harga terjangkau adalah hak setiap orang.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
             <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
               <Image src={WeddingCatering} alt="Stall" className="rounded-3xl mb-4 hover:shadow-xl hover:scale-105 duration-700" />

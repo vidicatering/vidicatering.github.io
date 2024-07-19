@@ -35,6 +35,12 @@ body {
   }
 }
 
+.text-gradient {
+  background: linear-gradient(90deg, #3b82f6, #10b981, #06b6d4, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hamburger-line {
   @apply w-9 h-1 my-2 block bg-vidi;
 }
@@ -49,10 +55,4 @@ body {
 
 .hamburger-active > span:nth-child(2) {
   @apply scale-0;
-}
-
-.text-gradient {
-  background: linear-gradient(90deg, #3b82f6, #10b981, #06b6d4, #3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
