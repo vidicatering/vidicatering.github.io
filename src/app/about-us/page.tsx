@@ -75,7 +75,7 @@ const about_us = () => {
           </div>
         </div>
         <div className="min-h-max flex items-center justify-center mb-0 mt-14 mx-32">
-          <div className=" p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] w-[1336px] h-max flex flex-col items-center py-10 px-8">
+          <div className=" p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] h-max flex flex-col items-center py-10 px-8">
             <p className="font-argent text-3xl text-center">
               Lebih dari 35 tahun pengalaman, VIDI Group telah dipercaya lebih dari 300 institusi terkemuka, melayani 5000<span className="font-mukta">+</span> Wedding<span className="font-serif"> & </span>Event dengan 1000 lebih menu
               pilihan. Kami mendedikasikan pengalaman dalam bidang ini untuk memberikan pelayanan terbaik di moment berharga anda
@@ -101,7 +101,7 @@ const about_us = () => {
         </div>
       </div>
       <div className="min-h-screen flex items-center justify-center my-0 mb-12">
-        <div className="bg-white p-6 rounded-3xl border border-bg_vidi max-w-[1336px] min-h-max shadow-xl">
+        <div className="bg-white p-6 rounded-3xl border border-bg_vidi max-w-[1336px] min-h-max shadow-xl mx-32">
           <div className="grid grid-cols-2 items-center px-10 py-14 gap-8 text-3xl text-vidi font-medium font-mukta">
             <div className="grid grid-cols-1 gap-y-7">
               <div className="bg-white rounded-xl flex  max-h-max items-center px-8 py-4 min-w-96 ">
