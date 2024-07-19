@@ -58,12 +58,12 @@ const Hero = () => {
     <>
       <div className="h-screen bg-no-repeat bg-cover bg-[url('/img/bg-hero.webp')] pt-20">
         <div className="h-full bg-gradient-to-t from-white to-transparent">
-          <div className="flex flex-col justify-center w-full space-y-2 h-full px-32">
-            <h1 className="font-argent text-6xl text-vidi font-medium">
+          <div className="flex flex-col justify-center w-full space-y-2 h-full lg:px-32 md:px-32 px-10">
+            <h1 className="font-argent lg:text-6xl md:text-6xl text-vidi font-medium text-4xl">
               Memorable Event <span className="block text-brown">Memorable Catering</span>
             </h1>
             <h2 className="text-vidi font-normal text-xl">~ With Vidi Catering ~</h2>
-            <p className="text-brown italic text-xl">
+            <p className="text-brown italic lg:text-xl md:text-xl text-lg">
               Experience the Best with VIDI Commitment <br /> to Quality on Your Special Day
             </p>
             <button className="bg-vidi rounded-lg w-max px-6 py-2 text-white text-lg font-semibold hover:opacity-90">
@@ -75,9 +75,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-no-repeat bg-cover bg-[url('/img/indonesia.webp')] text-gray-800">
-        <h1 className="text-5xl font-bold text-yellow-600 mb-5">Mengapa Harus VIDI?</h1>
-        <p className="mb-14 text-center text-2xl text-brown">Satu-satunya catering di Yogyakarta dan Jawa Tengah yang memiliki 4 standar ISO.</p>
+      <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-no-repeat bg-cover bg-center bg-[url('/img/indonesia.webp')] text-gray-800">
+        <h1 className="text-3xl lg:text-5xl font-bold text-yellow-600 mb-5">Mengapa Harus VIDI?</h1>
+        <p className="mb-14 text-center lg:text-2xl text-xl px-4 text-brown">Satu-satunya catering di Yogyakarta dan Jawa Tengah yang memiliki 4 standar ISO.</p>
         <div className="flex flex-wrap justify-center mb-8">
           <div className="bg-white shadow-xl rounded-xl p-6 m-4 w-64 text-center">
             <h2 className="text-xl font-bold mb-2">Sertifikat Halal</h2>
@@ -96,19 +96,19 @@ const Hero = () => {
             <p>Pengalaman Dalam Jasa Boga dan Hospitality</p>
           </div>
         </div>
-        <div className="overflow-hidden w-full h-28 mt-8 flex justify-center">
-          <div className="flex items-center space-x-8 gap-x-44">
-            <div className="relative w-32">
-              <img src="/img/chse.png" alt="chse" />
-            </div>
-            <div className="relative w-32">
-              <img src="/img/halal.png" alt="halal" />
-            </div>
-            <div className="relative w-32">
+        <div className="overflow-hidden w-full max-h-max mt-8 flex justify-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 items-center space-x-8  lg:gap-x-44 gap-7">
+            <div className="relative w-20">
               <img src="/img/iso_1.png" alt="iso" />
             </div>
-            <div className="relative w-32">
+            <div className="relative w-20">
               <img src="/img/iso2.png" alt="iso" />
+            </div>
+            <div className="relative w-20">
+              <img src="/img/chse.png" alt="chse" />
+            </div>
+            <div className="relative w-20">
+              <img src="/img/halal.png" alt="halal" />
             </div>
           </div>
         </div>
@@ -116,9 +116,9 @@ const Hero = () => {
 
       <div className="min-h-screen flex items-center justify-center py-4 mx-32">
         <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] max-h-[624px]">
-          <div className="flex flex-col md:flex-row items-center px-20 py-14 gap-10">
+          <div className="flex flex-col md:flex-row justify-center items-center px-20 py-14 gap-10">
             <div className="md:w-1/2 relative rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] max-w-[500px] max-h-[464px] overflow-hidden">
-              <Image src={VidiCatering} alt="Grha Sarina Vidi" className="" />
+              <Image src={VidiCatering} alt="Vidi Catering" className="" />
             </div>
             <div className="md:w-1/2 md:pl-6 mt-4 md:mt-0">
               <h3 className="text-2xl font-semibold text-vidi mb-2">Tentang</h3>
