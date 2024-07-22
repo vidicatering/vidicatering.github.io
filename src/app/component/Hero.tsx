@@ -83,21 +83,21 @@ const Hero = () => {
             <h2 className="text-xl font-bold mb-2">Sertifikat Halal</h2>
             <p>Memiliki sertifikasi HALAL dari MUI</p>
           </div>
-          <div className="bg-white shadow-xl rounded-xl p-6 m-4 w-64">
+          <div className="bg-white shadow-xl rounded-xl p-6 m-4 w-64 text-center">
             <h2 className="text-xl font-bold mb-2">12.000+</h2>
             <p>Telah Melayani lebih dari 12.000+ events</p>
           </div>
-          <div className="bg-white shadow-xl rounded-xl p-6 m-4 w-64">
+          <div className="bg-white shadow-xl rounded-xl p-6 m-4 w-64 text-center">
             <h2 className="text-xl font-bold mb-2">4 WQA-ISO +</h2>
             <p>Memiliki 4 sertifikat WQA-ISO tentang keamanan pangan</p>
           </div>
-          <div className="bg-white shadow-xl rounded-xl p-6 m-4 w-64">
+          <div className="bg-white shadow-xl rounded-xl p-6 m-4 w-64 text-center">
             <h2 className="text-xl font-bold mb-2">Sejak 1983</h2>
             <p>Pengalaman Dalam Jasa Boga dan Hospitality</p>
           </div>
         </div>
-        <div className="overflow-hidden w-full max-h-max mt-8 flex justify-center">
-          <div className="grid grid-cols-2 lg:grid-cols-4 items-center space-x-8  lg:gap-x-44 gap-7">
+        <div className="overflow-hidden w-full max-h-max my-8 flex items-center justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-4 items-center  lg:gap-x-44 gap-7">
             <div className="relative w-20">
               <img src="/img/iso_1.png" alt="iso" />
             </div>
@@ -114,17 +114,17 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center justify-center py-4 mx-32">
-        <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] max-h-[624px]">
-          <div className="flex flex-col md:flex-row justify-center items-center px-20 py-14 gap-10">
-            <div className="md:w-1/2 relative rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] max-w-[500px] max-h-[464px] overflow-hidden">
+      <div className="min-h-screen flex items-center justify-center py-4 lg:my-0 mx-32">
+        <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] lg:max-h-[624px] max-h-max ">
+          <div className="flex flex-col md:flex-row justify-center items-center lg:px-20 lg:py-14 px-10 py-10 gap-2 lg:gap-10">
+            <div className="md:w-1/2 relative rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] min-w-[200px] min-h-[150px] lg:max-w-[445px] lg:max-h-[372px] overflow-hidden">
               <Image src={VidiCatering} alt="Vidi Catering" className="" />
             </div>
             <div className="md:w-1/2 md:pl-6 mt-4 md:mt-0">
-              <h3 className="text-2xl font-semibold text-vidi mb-2">Tentang</h3>
+              <h3 className="lg:text-2xl text-xl font-semibold text-vidi mb-2">Tentang</h3>
               <div className="w-16 border-b-2 border-vidi mb-4"></div>
-              <h2 className="text-3xl font-bold mb-4">VIDI Catering</h2>
-              <p className="mb-4 text-justify">
+              <h2 className="lg:text-3xl text-2xl font-bold mb-4">VIDI Catering</h2>
+              <p className="mb-4 lg:text-justify">
                 Vidi Catering merupakan perusahaan yang bergera dalam bidang jasa boga dan hospitality service yang spesialis melayani food catering, Catering Weddding, Catering Harian, Government Tender, dan lain-lain. Dengan pengalaman
                 yang dimiliki, VIDI Group terus berkembang dengan mengutamakan kualitas, cita rasa, pelayanan, hingga kebersihan untuk memberikan kepuasan kepada konsumen setia kami. VIDI Group juga menjaga keamanan pangan dengan adanya
                 sertifikasi nasional hingga internasional.

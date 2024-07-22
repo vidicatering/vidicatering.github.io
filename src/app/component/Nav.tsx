@@ -10,7 +10,7 @@ const Nav = () => {
     <>
       <Script src="/js/script.js" />
       <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 my-0 bg-white">
-        <div className="container lg:mx-32 md:mx-32 ">
+        <div className="container lg:mx-32 md:mx-32 mx-5">
           <div className="flex items-center justify-between relative">
             <div className="">
               <a href="#home">
