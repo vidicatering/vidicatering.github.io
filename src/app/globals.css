@@ -56,3 +56,13 @@ body {
 .hamburger-active > span:nth-child(2) {
   @apply scale-0;
 }
+
+.popup_show {
+  @apply opacity-100;
+}
+
+.popup_close {
+  @apply opacity-0;
+  @apply transition-all;
+  @apply ease-out;
+}

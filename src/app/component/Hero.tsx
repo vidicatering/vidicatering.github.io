@@ -32,7 +32,7 @@ const items = [
   { id: 8, src: logo, alt: "Client 8" },
 ].map((item) => (
   <div key={item.id} className="flex justify-center" onDragStart={handleDragStart} role="presentation">
-    <Image src={item.src} alt={item.alt} className="h-24 w-auto" />
+    <Image src={item.src} alt={item.alt} className="h-24 w-auto " />
   </div>
 ));
 
@@ -98,16 +98,16 @@ const Hero = () => {
         </div>
         <div className="overflow-hidden w-full max-h-max my-8 flex items-center justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-4 items-center  lg:gap-x-44 gap-7">
-            <div className="relative w-20">
+            <div className=" w-20">
               <img src="/img/iso_1.png" alt="iso" />
             </div>
-            <div className="relative w-20">
+            <div className=" w-20">
               <img src="/img/iso2.png" alt="iso" />
             </div>
-            <div className="relative w-20">
+            <div className=" w-20">
               <img src="/img/chse.png" alt="chse" />
             </div>
-            <div className="relative w-20">
+            <div className=" w-20">
               <img src="/img/halal.png" alt="halal" />
             </div>
           </div>
@@ -117,7 +117,7 @@ const Hero = () => {
       <div className="min-h-screen flex items-center justify-center py-4 lg:my-0 mx-32">
         <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] lg:max-h-[624px] max-h-max ">
           <div className="flex flex-col md:flex-row justify-center items-center lg:px-20 lg:py-14 px-10 py-10 gap-2 lg:gap-10">
-            <div className="md:w-1/2 relative rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] min-w-[200px] min-h-[150px] lg:max-w-[445px] lg:max-h-[372px] overflow-hidden">
+            <div className="md:w-1/2  rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] min-w-[200px] min-h-[150px] lg:max-w-[445px] lg:max-h-[372px] overflow-hidden">
               <Image src={VidiCatering} alt="Vidi Catering" className="" />
             </div>
             <div className="md:w-1/2 md:pl-6 mt-4 md:mt-0">
@@ -170,7 +170,7 @@ const Hero = () => {
       <div className="min-h-screen flex items-center justify-center my-0 mx-32">
         <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] max-h-[624px]">
           <div className="flex flex-col md:flex-row items-center px-20 py-14 gap-10">
-            <div className="md:w-1/2 relative rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] max-w-[445px] max-h-[372px] overflow-hidden">
+            <div className="md:w-1/2  rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] max-w-[445px] max-h-[372px] overflow-hidden">
               <Image src={Ballroom} alt="Grha Sarina Vidi" className="" />
             </div>
             <div className="md:w-1/2 md:pl-6 mt-4 md:mt-0">
@@ -204,7 +204,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-bg_vidi to-white">
+      {/* <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-bg_vidi to-white">
         <div className="flex max-w-7xl w-full items-center justify-center mx-32">
           <div className="min-w-[500px]">
             <h1 className="text-6xl mb-4 font-semibold">Read From Our Satisfied Clients.</h1>
@@ -227,7 +227,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="bg-gradient-to-b from-bg_vidi to-white">
         <Contact />
