@@ -47,7 +47,7 @@ const Nav = () => {
                     )}
                   </li>
                   <li className="group">
-                    <Link href="/ballroom-convention-hall" className="block px-4 py-2 hover:text-vidi ">
+                    <Link href="/ballroom-convention-hall" className="block mx-8 py-2 hover:text-vidi ">
                       Ballroom & Convention Hall
                     </Link>
                   </li>

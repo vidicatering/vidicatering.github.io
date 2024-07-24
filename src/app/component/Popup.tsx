@@ -15,10 +15,10 @@ const PopUp = () => {
               X
             </button>
           </div>
-          <div className="max-w-xs lg:max-w-7xl flex items-center justify-center m-auto ">
-            <div className="overflow-hidden rounded-lg shadow-2xl md:grid md:grid-cols-3 bg-white">
+          <div className="max-w-xs lg:max-w-7xl md:max-w-2xl flex items-center justify-center m-auto ">
+            <div className="overflow-hidden rounded-xl shadow-2xl md:grid md:grid-cols-3 bg-white">
               <Image src={kabah} alt="kabah" className="h-60 w-full object-cover md:h-full " />
-              <div className="p-4 text-center sm:p-6 md:col-span-2 lg:p-8">
+              <div className="p-4 text-center sm:p-6 md:col-span-2 lg:p-8 m-auto">
                 <p className="text-sm font-semibold uppercase tracking-widest">🎉 Promo Spesial! 🎉</p>
 
                 <h2 className="mt-6 font-black uppercase">

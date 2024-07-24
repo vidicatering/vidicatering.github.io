@@ -125,7 +125,7 @@ const Hero = () => {
               <div className="w-16 border-b-2 border-vidi mb-4"></div>
               <h2 className="lg:text-3xl text-2xl font-bold mb-4">VIDI Catering</h2>
               <p className="mb-4 lg:text-justify">
-                Vidi Catering merupakan perusahaan yang bergera dalam bidang jasa boga dan hospitality service yang spesialis melayani food catering, Catering Weddding, Catering Harian, Government Tender, dan lain-lain. Dengan pengalaman
+                Vidi Catering merupakan perusahaan yang bergerak dalam bidang jasa boga dan hospitality service yang spesialis melayani food catering, Catering Weddding, Catering Harian, Government Tender, dan lain-lain. Dengan pengalaman
                 yang dimiliki, VIDI Group terus berkembang dengan mengutamakan kualitas, cita rasa, pelayanan, hingga kebersihan untuk memberikan kepuasan kepada konsumen setia kami. VIDI Group juga menjaga keamanan pangan dengan adanya
                 sertifikasi nasional hingga internasional.
               </p>
@@ -135,9 +135,9 @@ const Hero = () => {
       </div>
 
       <div className="flex items-center justify-center">
-        <div className="bg-white p-6 rounded-lg max-w-7xl w-full mx-32">
-          <h2 className="text-5xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
-          <p className="text-2xl text-center text-brown my-4 mb-10">Mendapatkan pelayanan catering terbaik dengan harga terjangkau adalah hak setiap orang.</p>
+        <div className="bg-white py-6 rounded-lg max-w-7xl w-full mx-32">
+          <h2 className="lg:text-5xl text-4xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
+          <p className="lg:text-2xl  text-center text-brown my-4 mb-10">Mendapatkan pelayanan catering terbaik dengan harga terjangkau adalah hak setiap orang.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
             <div className="flex flex-col items-center bg-white rounded-b-3xl rounded-t-[150px] shadow-md p-4">
               <Image src={WeddingCatering} alt="Stall" className="rounded-3xl mb-4 hover:shadow-xl hover:scale-105 duration-700" />

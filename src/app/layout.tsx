@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${argent.variable}`}>
       <body>
-        <Nav /> {/* Pindahkan Nav ke sini jika ingin global */}
+        {/* <Nav /> Pindahkan Nav ke sini jika ingin global */}
         {children}
         <SpeedInsights />
       </body>
