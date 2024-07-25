@@ -2,19 +2,10 @@
 "use client";
 
 import React from "react";
-import Nav from "../component/Nav";
 import Image from "next/image";
-import VidiCatering from "/public/img/vidi1.webp";
-import Wedding from "/public/img/Wedding.webp";
-import Gathering from "/public/img/Gathering.webp";
-import Ballroom from "/public/img/ballroom.webp";
-import Meeting from "/public/img/Meeting.webp";
-import Wisuda from "/public/img/Wisuda.webp";
-import Syukuran from "/public/img/Syukuran.webp";
 import Gallery from "../component/Gallery";
 import Contact from "../component/Contact";
 import Footer from "../component/Footer";
-import aboutus from "/public/img/about_us.webp";
 import "react-alice-carousel/lib/alice-carousel.css";
 import logo from "/public/img/iso_1.png";
 import dynamic from "next/dynamic";
@@ -41,7 +32,6 @@ const items = [
 const about_us = () => {
   return (
     <div>
-      <Nav />
       <div className=" h-[450px] bg-no-repeat bg-cover bg-[url('/img/about_us.webp')] pt-20 ">
         <div className="h-full bg-white bg-opacity-30">
           <div className="h-full bg-gradient-to-t from-white to-100% ">

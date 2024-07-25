@@ -1,10 +1,9 @@
-// src/app/layout.tsx
-import { Metadata } from "next";
 import "./globals.css";
 import localfont from "next/font/local";
 import React from "react";
-import Nav from "./component/Nav"; // Pastikan path ke komponen Nav benar
+import { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import ClientLayout from "./ClientLayout"; // Import komponen client layout
 
 const argent = localfont({
   src: [
@@ -24,8 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${argent.variable}`}>
       <body>
-        {/* <Nav /> Pindahkan Nav ke sini jika ingin global */}
-        {children}
+        <ClientLayout>{children}</ClientLayout>
         <SpeedInsights />
       </body>
     </html>

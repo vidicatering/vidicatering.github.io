@@ -1,9 +1,7 @@
 // src/app/wedding-catering.tsx
 
 import React from "react";
-import Nav from "../component/Nav";
 import Image from "next/image";
-import VidiCatering from "/public/img/vidi1.webp";
 import Wedding from "/public/img/Wedding.webp";
 import Gathering from "/public/img/Gathering.webp";
 import Ballroom from "/public/img/ballroom.webp";
@@ -13,7 +11,6 @@ import Syukuran from "/public/img/Syukuran.webp";
 import Gallery from "../component/Gallery";
 import Contact from "../component/Contact";
 import Footer from "../component/Footer";
-import GSV from "/public/img/gsv.webp";
 import Link from "next/link";
 import Hall from "/public/img/hall.webp";
 import Youth from "/public/img/youth.webp";
@@ -22,7 +19,6 @@ import map from "/public/img/map.webp";
 const WeddingCatering = () => {
   return (
     <div>
-      <Nav />
       <div className=" h-screen bg-no-repeat bg-cover bg-[url('/img/GrhaSarinaVidi.webp')] pt-20 ">
         <div className="h-full bg-gradient-to-t from-white via-transparent to-transparent ">
           <div className="flex flex-col justify-center w-full space-y-2 h-full px-32">

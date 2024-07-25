@@ -1,7 +1,6 @@
 // src/app/wedding-catering.tsx
 
 import React from "react";
-import Nav from "../component/Nav";
 import Image from "next/image";
 import VidiCatering from "/public/img/vidi1.webp";
 import stall from "/public/img/Stall.webp";
@@ -20,7 +19,6 @@ import Link from "next/link";
 const WeddingCatering = () => {
   return (
     <div>
-      <Nav />
       <div className=" h-screen bg-no-repeat bg-cover bg-[url('/img/wedding-catering.webp')] pt-20 ">
         <div className="h-full bg-gradient-to-t from-white via-transparent to-transparent ">
           <div className="flex flex-col justify-center w-full space-y-2 h-full px-32">
