@@ -10,6 +10,8 @@ import image5 from "/public/img/image5.webp";
 import image6 from "/public/img/image6.webp";
 import image7 from "/public/img/image7.webp";
 import image8 from "/public/img/image8.webp";
+import image13 from "/public/img/image14.webp";
+import image14 from "/public/img/image13.webp";
 import senja from "/public/img/senja.webp";
 import umrah from "/public/img/umrah.webp";
 
@@ -19,8 +21,15 @@ const foodtasting = () => {
   return (
     <div className=" ">
       <div className="max-w-sm m-auto">
-        <Image src={senja} alt="Stall" className="   " />
-        <Image src={umrah} alt="Stall" className="   " />
+        <Image src={image13} alt="Stall" className="   " />
+        <div className="flex justify-center">
+          <button className=" bg-vidi rounded-xl hover:opacity-90 mb-10">
+            <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
+              Hubungi Kami
+            </Link>
+          </button>
+        </div>
+        <Image src={image14} alt="Stall" className="mb-10" />
         <Image src={image1} alt="Stall" className="   " />
         <div className="flex justify-center">
           <button className=" bg-vidi rounded-xl hover:opacity-90  ">

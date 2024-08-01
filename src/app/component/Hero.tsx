@@ -186,7 +186,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center lg:mx-32 my-28 h-28">
+      {/* <div className="flex flex-col items-center justify-center lg:mx-32 my-28 h-28">
         <div className="bg-white p-6 rounded-lg max-w-7xl w-full">
           <h2 className="text-3xl font-bold text-center mb-8">Our Clients</h2>
           <AliceCarousel
@@ -202,7 +202,7 @@ const Hero = () => {
             disableButtonsControls={true}
           />
         </div>
-      </div>
+      </div> */}
 
       <div className="min-h-max py-16 flex items-center justify-center bg-gradient-to-t from-bg_vidi to-white">
         <div className="flex lg:flex-row flex-col my-auto max-w-7xl  items-center justify-center lg:mx-32 mx-10">
