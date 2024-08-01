@@ -13,7 +13,12 @@ import Wisuda from "/public/img/Wisuda.webp";
 import Syukuran from "/public/img/Syukuran.webp";
 import hampers from "/public/img/hampers.webp";
 
-const images = [
+type ImageType = {
+  src: StaticImageData;
+  alt: string;
+};
+
+const images: ImageType[] = [
   { src: Stall, alt: "Stall" },
   { src: Buffet, alt: "Buffet" },
   { src: NasiKotak, alt: "Nasi Kotak" },
@@ -28,7 +33,7 @@ const images = [
   { src: Syukuran, alt: "Syukuran" },
 ];
 
-const shuffleArray = (array) => {
+const shuffleArray = (array: ImageType[]): ImageType[] => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -36,11 +41,11 @@ const shuffleArray = (array) => {
   return array;
 };
 
-const Gallery = () => {
+const Gallery: React.FC = () => {
   const shuffledImages = shuffleArray([...images]);
 
   return (
-    <div className="flex justify-center items-center mb-6 ">
+    <div className="flex justify-center items-center mb-6">
       <div className="min-h-screen max-w-[1280px]">
         <div className="mt-16 mb-12">
           <h1 className="text-5xl font-bold text-yellow-600 text-center">Gallery</h1>
