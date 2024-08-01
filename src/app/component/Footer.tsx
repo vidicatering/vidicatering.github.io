@@ -4,7 +4,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer>
-      <div className=" mx-32">
+      <div className=" lg:mx-32 mx-10">
         <div className="flex items-center justify-center relative my-7 gap-6">
           <div className="">
             <a href="#home">

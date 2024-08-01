@@ -7,7 +7,6 @@ import PopUp from "./component/Popup";
 
 const Main = () => (
   <>
-    <PopUp />
     <Nav />
     <Hero />
     <Footer />

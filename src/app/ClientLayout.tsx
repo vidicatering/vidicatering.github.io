@@ -11,7 +11,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   return (
     <>
       {!isFoodTastingPage && <Nav />}
-      <PopUp />
+      {/* <PopUp /> */}
       {children}
     </>
   );

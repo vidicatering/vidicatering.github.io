@@ -114,7 +114,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center justify-center py-4 lg:my-0 mx-32">
+      <div className="min-h-screen flex items-center justify-center py-4 lg:my-0 lg:mx-32 mx-10">
         <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] lg:max-h-[624px] max-h-max ">
           <div className="flex flex-col md:flex-row justify-center items-center lg:px-20 lg:py-14 px-10 py-10 gap-2 lg:gap-10">
             <div className="md:w-1/2  rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] min-w-[200px] min-h-[150px] lg:max-w-[445px] lg:max-h-[372px] overflow-hidden">
@@ -135,7 +135,7 @@ const Hero = () => {
       </div>
 
       <div className="flex items-center justify-center">
-        <div className="bg-white py-6 rounded-lg max-w-7xl w-full mx-32">
+        <div className="bg-white py-6 rounded-lg max-w-7xl w-full lg:mx-32 mx-10">
           <h2 className="lg:text-5xl text-4xl font-bold text-yellow-600 text-center mb-4">Our Offering</h2>
           <p className="lg:text-2xl  text-center text-brown my-4 mb-10">Mendapatkan pelayanan catering terbaik dengan harga terjangkau adalah hak setiap orang.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
@@ -167,7 +167,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center justify-center my-0 mx-32">
+      {/* <div className="min-h-screen flex items-center justify-center my-0 mx-32">
         <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] max-h-[624px]">
           <div className="flex flex-col md:flex-row items-center px-20 py-14 gap-10">
             <div className="md:w-1/2  rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] max-w-[445px] max-h-[372px] overflow-hidden">
@@ -184,9 +184,27 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="min-h-screen flex items-center justify-center py-4 lg:my-0 lg:mx-32 mx-10">
+        <div className="bg-bg_vidi p-6 rounded-tl-[80px] rounded-tr-xl rounded-bl-xl rounded-br-[80px] max-w-[1336px] lg:max-h-[624px] max-h-max ">
+          <div className="flex flex-col md:flex-row justify-center items-center lg:px-20 lg:py-14 px-10 py-10 gap-2 lg:gap-10">
+            <div className="md:w-1/2  rounded-tl-[50px] rounded-bl-xl rounded-tr-xl rounded-br-[50px] min-w-[200px] min-h-[150px] lg:max-w-[445px] lg:max-h-[372px] overflow-hidden">
+              <Image src={Ballroom} alt="Grha Sarina Vidi" className="" />
+            </div>
+            <div className="md:w-1/2 md:pl-6 mt-4 md:mt-0">
+              <h3 className="lg:text-2xl text-xl font-semibold text-vidi mb-2">Ballroom & Convention Hall</h3>
+              <div className="w-16 border-b-2 border-vidi mb-4"></div>
+              <h2 className="lg:text-3xl text-2xl font-bold mb-4">Grha Sarina Vidi</h2>
+              <p className="mb-4 lg:text-justify">
+                Berdiri sejak tahun 2003 Grha Sarina Vidi mampu menampung kapasitas tamu undangan sebanyak 1500 di setiap acara. Dengan fasilitas yang mendukung yang di sediakan GSV dan dibantu Vidi Catering yang sudah berpengalaman lebih
+                dari 38 tahun Sehingga mampu menyajikan Fasilitas dan jasa boga secara profesional yang membuat pesta pernikahhan ataupun (MICT) Meeting, Incentive, Convention, & Exhibition terasa mewah.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center mx-32 h-28">
+      <div className="flex flex-col items-center justify-center lg:mx-32 my-28 h-28">
         <div className="bg-white p-6 rounded-lg max-w-7xl w-full">
           <h2 className="text-3xl font-bold text-center mb-8">Our Clients</h2>
           <AliceCarousel
@@ -204,17 +222,17 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-bg_vidi to-white">
-        <div className="flex max-w-7xl w-full items-center justify-center mx-32">
-          <div className="min-w-[500px]">
+      <div className="min-h-max py-16 flex items-center justify-center bg-gradient-to-t from-bg_vidi to-white">
+        <div className="flex lg:flex-row flex-col my-auto max-w-7xl  items-center justify-center lg:mx-32 mx-10">
+          <div className="lg:min-w-[500px]">
             <h1 className="text-6xl mb-4 font-semibold">Read From Our Satisfied Clients.</h1>
             <p className="text-xl">Pengalaman nyata dari pelanggan kami ketika menggunakan produk/layanan dari VIDI Catering</p>
             <button className="bg-vidi hover:shadow-lg hover:opacity-90 duration-200 rounded-xl px-4 py-2 mt-4 text-lg text-white">Save Changes</button>
           </div>
-          <div className="">
+          <div className="mt-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white shadow-lg lg p-8 rounded-lg h-80">
+                <div key={index} className="bg-white shadow-lg p-8 rounded-lg h-80">
                   <div className="flex items-center mb-4">
                     <div className="text-justify w-full p-0">
                       <h3 className="text-xl font-semibold">{testimonial.name}</h3>
@@ -227,7 +245,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       <div className="bg-gradient-to-b from-bg_vidi to-white">
         <Contact />
