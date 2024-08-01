@@ -14,7 +14,7 @@ import Syukuran from "/public/img/Syukuran.webp";
 import hampers from "/public/img/hampers.webp";
 
 interface CustomImageProps {
-  src: StaticImageData;
+  src: any;
   alt: string;
 }
 
