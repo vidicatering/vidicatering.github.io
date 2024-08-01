@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 import Stall from "/public/img/Stall.webp";
 import Buffet from "/public/img/Buffet.webp";
 import NasiKotak from "/public/img/nasi_box.webp";
@@ -13,12 +13,12 @@ import Wisuda from "/public/img/Wisuda.webp";
 import Syukuran from "/public/img/Syukuran.webp";
 import hampers from "/public/img/hampers.webp";
 
-type ImageType = {
+interface CustomImageProps {
   src: StaticImageData;
   alt: string;
-};
+}
 
-const images: ImageType[] = [
+const images: CustomImageProps[] = [
   { src: Stall, alt: "Stall" },
   { src: Buffet, alt: "Buffet" },
   { src: NasiKotak, alt: "Nasi Kotak" },
@@ -33,7 +33,7 @@ const images: ImageType[] = [
   { src: Syukuran, alt: "Syukuran" },
 ];
 
-const shuffleArray = (array: ImageType[]): ImageType[] => {
+const shuffleArray = (array: CustomImageProps[]): CustomImageProps[] => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
