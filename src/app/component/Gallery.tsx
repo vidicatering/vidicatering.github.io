@@ -41,11 +41,11 @@ const Gallery = () => {
 
   return (
     <div className="flex justify-center items-center mb-6 ">
-      <div className=" min-h-screen  max-w-[1280px]">
+      <div className="min-h-screen max-w-[1280px]">
         <div className="mt-16 mb-12">
           <h1 className="text-5xl font-bold text-yellow-600 text-center">Gallery</h1>
         </div>
-        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-10 lg:mx-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-10 lg:mx-2">
           {shuffledImages.map((image, index) => (
             <div key={index} className="">
               <Image src={image.src} alt={image.alt} className="rounded-lg" />
