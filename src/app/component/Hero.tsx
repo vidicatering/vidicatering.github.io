@@ -47,7 +47,7 @@ const Hero = () => {
               Memorable Event <span className="block text-brown">Memorable Catering</span>
             </h1>
             <h2 className="text-vidi font-normal text-xl">~ With Vidi Catering ~</h2>
-            <p className="text-brown italic lg:text-xl md:text-xl text-lg">
+            <p className="text-brown italic lg:text-xl md:text-xl text-base">
               Experience the Best with VIDI Commitment <br /> to Quality on Your Special Day
             </p>
             <button className="bg-vidi rounded-lg w-max px-6 py-2 text-white text-lg font-semibold hover:opacity-90">
