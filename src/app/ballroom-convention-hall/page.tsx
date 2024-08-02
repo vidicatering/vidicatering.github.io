@@ -26,7 +26,7 @@ const WeddingCatering = () => {
 
             <h2 className="text-brown font-medium font-argent text-3xl">Ballroom and Convention Hall</h2>
             <button className="bg-vidi rounded-lg w-max px-6 py-2 text-white text-lg font-semibold hover:opacity-90">
-              <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="">
+              <Link href="https://linktr.ee/vidicatering" passHref target="_blank" rel="noopener noreferrer" className="">
                 Pricelist Grha Sarina Vidi
               </Link>
             </button>
