@@ -4,6 +4,7 @@ import React from "react";
 import { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ClientLayout from "./ClientLayout"; // Import komponen client layout
+import Script from "next/script";
 
 const argent = localfont({
   src: [
@@ -23,6 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${argent.variable}`}>
       <body>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC7VE7M22E"></script>
+        <script></script>
+        <Script src="/js/googleAnalytics.js" />
         <ClientLayout>{children}</ClientLayout>
         <SpeedInsights />
       </body>
