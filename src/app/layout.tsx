@@ -27,8 +27,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC7VE7M22E"></script>
         <script></script>
         <Script src="/js/googleAnalytics.js" />
-        <ClientLayout>{children}</ClientLayout>
         <SpeedInsights />
+        <main>
+          <ClientLayout>{children}</ClientLayout>
+        </main>
       </body>
     </html>
   );
