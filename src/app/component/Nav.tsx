@@ -10,7 +10,7 @@ const Nav = () => {
     <>
       <Script src="/js/script.js" />
       <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 my-0 bg-white">
-        <div className="container lg:mx-32 md:mx-32 mx-5">
+        <div className="container lg:mx-32 md:mx-20 mx-5">
           <div className="flex items-center justify-between relative">
             <div className="">
               <a href="#home">
@@ -26,12 +26,12 @@ const Nav = () => {
               <nav id="nav-menu" className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[320px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                 <ul className="block lg:flex">
                   <li className="group">
-                    <Link href="/" className="text-base py-2 mx-8 flex group-hover:text-vidi">
+                    <Link href="/" className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi">
                       Beranda
                     </Link>
                   </li>
                   <li onClick={() => setDropdownOpen(!dropdownOpen)} className="group">
-                    <button className="text-base py-2 mx-8 flex group-hover:text-vidi ">Catering Service</button>
+                    <button className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi ">Catering Service</button>
                     {dropdownOpen && (
                       <div className="absolute  mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 ">
                         <Link href="/wedding-catering" className="block px-4 py-2 hover:text-vidi ">
@@ -47,18 +47,18 @@ const Nav = () => {
                     )}
                   </li>
                   <li className="group">
-                    <Link href="/ballroom-convention-hall" className="block mx-8 py-2 hover:text-vidi ">
+                    <Link href="/ballroom-convention-hall" className="block md:mx-5 mx-8 py-2 hover:text-vidi ">
                       Ballroom & Convention Hall
                     </Link>
                   </li>
                   <li className="group">
-                    <Link href="/about-us" className="text-base py-2 mx-8 flex group-hover:text-vidi">
+                    <Link href="/about-us" className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi">
                       About Us
                     </Link>
                   </li>
                   <li className="group">
                     <button className=" bg-vidi rounded-xl hover:opacity-90 mx-4 ">
-                      <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
+                      <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 md:mx-5 mx-8 flex">
                         Hubungi Kami
                       </Link>
                     </button>

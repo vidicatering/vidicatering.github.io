@@ -1,4 +1,7 @@
+import { title } from "process";
 import { getBlogs } from "../../../lib/data";
+import { formatDate } from "../../../lib/utils";
+import { EditButton, DeletedButton } from "./button";
 
 const BlogTable = async () => {
   const blogs = await getBlogs();
@@ -14,13 +17,18 @@ const BlogTable = async () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className="py-3 px-6"></td>
-          <td className="py-3 px-6"></td>
-          <td className="py-3 px-6"></td>
-          <td className="py-3 px-6"></td>
-          <td></td>
-        </tr>
+        {blogs.map((blogTable, index) => (
+          <tr key={blogTable.id} className="bg-white border-b ">
+            <td className="py-3 px-6">{index + 1}</td>
+            <td className="py-3 px-6">{blogTable.title}</td>
+            <td className="py-3 px-6 ">{blogTable.content}</td>
+            <td className="py-3 px-6">{formatDate(blogTable.createdAt.toString())}</td>
+            <td className="flex justify-center gap-1 py-3 ">
+              <EditButton />
+              <DeletedButton />
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
