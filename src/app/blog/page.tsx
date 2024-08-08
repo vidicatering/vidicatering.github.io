@@ -6,11 +6,6 @@ interface Post {
   date: string;
 }
 
-const posts: Post[] = [
-  { id: "1", title: "Artikel Pertama", date: "2024-08-05" },
-  { id: "2", title: "Artikel Kedua", date: "2024-08-06" },
-];
-
 export default function Blog() {
   return (
     <div className="min-h-screen min-w-full mx-auto  mt-20 px-32">
