@@ -8,7 +8,7 @@ if (popup && dismiss) {
 
   dismiss.addEventListener("click", function () {
     popup.classList.remove("popup_show");
-    popup.classList.add("opacity-0");
+    popup.classList.add("hidden");
   });
 } else {
   console.error("Popup or dismiss button not found in the DOM.");
