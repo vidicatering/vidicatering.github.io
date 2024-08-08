@@ -18,10 +18,12 @@ const BlogTable = async () => {
       </thead>
       <tbody>
         {blogs.map((blogTable, index) => (
-          <tr key={blogTable.id} className="bg-white border-b ">
+          <tr key={blogTable.id} className="bg-white border-b  ">
             <td className="py-3 px-6">{index + 1}</td>
             <td className="py-3 px-6">{blogTable.title}</td>
-            <td className="py-3 px-6 ">{blogTable.content}</td>
+            <td className="py-3 px-6">
+              <div className="max-h-10 overflow-hidden">{blogTable.content}</div>
+            </td>
             <td className="py-3 px-6">{formatDate(blogTable.createdAt.toString())}</td>
             <td className="flex justify-center gap-1 py-3 ">
               <EditButton />
