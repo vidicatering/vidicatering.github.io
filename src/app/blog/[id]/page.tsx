@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { useParams } from "next/navigation";
 
 interface Post {
   id: string;
@@ -13,9 +13,8 @@ const posts: { [key: string]: Post } = {
 };
 
 export default function Post() {
-  const router = useRouter();
-  const { id } = router.query;
-  const post = posts[id as string];
+  const { id } = useParams();
+  const post = posts[id];
 
   if (!post) {
     return <div>Artikel tidak ditemukan</div>;
