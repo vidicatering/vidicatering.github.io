@@ -8,11 +8,11 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const pathname = usePathname();
   const isFoodTastingPage = pathname === "/food-tasting-flight";
   const isDashboardPage = pathname === "/dashboard";
+  const isCreatedFormPage = pathname === "/blog/create";
 
   return (
     <>
-      {!isFoodTastingPage && !isDashboardPage && <Nav />}
-      <PopUp />
+      {!isFoodTastingPage && !isDashboardPage && !isCreatedFormPage && <Nav /> && <PopUp />}
       {children}
     </>
   );
