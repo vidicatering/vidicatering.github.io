@@ -11,14 +11,14 @@ const PopUp = () => {
     <>
       <Script src="/js/popup.js" />;
       <div id="popup" className="opacity-0 transition-all duration-1000 ease-in w-full h-full fixed bg-white bg-opacity-80 ">
-        <div className="  mx-auto lg:mt-14 mt-10">
+        <div className="  mx-auto lg:mt-14 md:mt-14 mt-10">
           <div className=" h-10">
             <button id="popup_close" className="absolute right-10 top-10 lg:right-[670px] lg:top-[68px] font-mukta font-black text-xl">
               X
             </button>
           </div>
           <div className="">
-            <Image src={banner} alt="food tasting flight" className="h-[750px] w-auto shadow-2xl mx-auto" />
+            <Image src={banner} alt="food tasting flight" className="h-[450px] md:h-[800px] lg:h-[750px] w-auto shadow-2xl mx-auto" />
           </div>
           <div className="mx-auto flex justify-center items-center">
             <button className=" mt-6 mx-auto bg-vidi rounded-lg py-4 px-4 text-xl font-bold uppercase tracking-widest text-white hover:shadow-lg">
