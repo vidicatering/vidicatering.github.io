@@ -21,7 +21,7 @@ const PopUp = () => {
             <Image src={banner} alt="food tasting flight" className="h-[750px] w-auto shadow-2xl mx-auto" />
           </div>
           <div className="mx-auto flex justify-center items-center">
-            <button className=" mt-6 mx-auto bg-vidi rounded-lg py-4 px-4 text-xl font-bold uppercase tracking-widest text-white">
+            <button className=" mt-6 mx-auto bg-vidi rounded-lg py-4 px-4 text-xl font-bold uppercase tracking-widest text-white hover:shadow-lg">
               <Link href="https://forms.gle/tSfuCcbweYeATNoo7" passHref target="_blank" rel="noopener noreferrer" className="">
                 KLAIM SEKARANG!
               </Link>
