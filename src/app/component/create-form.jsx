@@ -85,6 +85,7 @@ import "ckeditor5/ckeditor5.css";
 
 const CreateForm = () => {
   const [content, setContent] = useState("");
+  const [judul, setJudul] = useState("");
   const editorContainerRef = useRef(null);
   const editorRef = useRef(null);
   const [isLayoutReady, setIsLayoutReady] = useState(false);
@@ -94,6 +95,16 @@ const CreateForm = () => {
 
     return () => setIsLayoutReady(false);
   }, []);
+  const handleSubmit = async (event) => {
+    //event.preventDefault();
+    const formData = new FormData(event.target);
+
+    // Tambahkan data dari CKEditor ke FormData
+    formData.set(judul, content);
+
+    // Panggil fungsi saveBlog dengan data yang sudah ditambahkan
+    await saveBlog(formData);
+  };
 
   const editorConfig = {
     toolbar: {
@@ -364,7 +375,7 @@ const CreateForm = () => {
           </label>
           <div>
             <div className="main-container">
-              <div className="editor-container editor-container_classic-editor editor-container_include-style" id="content">
+              <div className="editor-container editor-container_classic-editor editor-container_include-style" name="content" id="content">
                 {isLayoutReady && (
                   <CKEditor
                     editor={ClassicEditor}
@@ -372,7 +383,7 @@ const CreateForm = () => {
                     data={content} // Initial content
                     onChange={(event, editor) => {
                       const data = editor.getData();
-                      setContent(data); // Update state when content changes
+                      setContent(data);
                     }}
                   />
                 )}

@@ -18,6 +18,8 @@ model BlogModel {
   id        String    @id @default(cuid())
   title     String
   content   String
+  image     String    @default("default-image.png")
+  tags      String    @default("")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
