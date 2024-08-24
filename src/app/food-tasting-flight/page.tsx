@@ -21,62 +21,60 @@ import Link from "next/link";
 
 const foodtasting = () => {
   return (
-    <div className=" ">
-      <div className="max-w-sm m-auto">
-        <Image src={image13} alt="Stall" className="   " />
-        <div className="flex justify-center">
-          <button className=" bg-vidi rounded-xl hover:opacity-90 mt-5 mb-10 animate-bounce">
-            <Link
-              href="https://wa.me/628112546265?text=Hai%20Admin%20VIDI%20Catering%2C%20Saya%20ingin%20bergabung%20di%20acara%20Free%20Food%20Tasting%20Flight%20Batch%202"
-              passHref
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white text-xl py-2 mx-8 flex"
-            >
-              Klik Untuk Bergabung
-            </Link>
-          </button>
-        </div>
-        <Image src={image14} alt="Stall" className="mb-10" />
-        <Image src={image1} alt="Stall" className="   " />
-        <div className="flex justify-center">
-          <button className=" bg-vidi rounded-xl hover:opacity-90  ">
-            <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
-              Hubungi Kami
-            </Link>
-          </button>
-        </div>
-        <Image src={image2} alt="Stall" className="   " />
-        <Image src={image3} alt="Stall" className="-my-5" />
-        <div className="flex justify-center mt-5 mb-10">
-          <button className=" bg-vidi rounded-xl hover:opacity-90  ">
-            <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
-              Hubungi Kami
-            </Link>
-          </button>
-        </div>
-        <Image src={image4} alt="Stall" className="" />
-        <Image src={image8} alt="Stall" className="" />
-        <div className="flex justify-center mb-10">
-          <button className=" bg-vidi rounded-xl hover:opacity-90  ">
-            <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
-              Hubungi Kami
-            </Link>
-          </button>
-        </div>
-        <Image src={image5} alt="Stall" className="   " />
-        <Image src={image15} alt="Stall" className="   " />
-        <div className="flex justify-center mt-5 mb-10">
-          <button className=" bg-vidi rounded-xl hover:opacity-90  ">
-            <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
-              Hubungi Kami
-            </Link>
-          </button>
-        </div>
-        <Image src={image16} alt="Stall" className="   " />
-        <Image src={image6} alt="Stall" className="" />
-        <Image src={image7} alt="Stall" className="" />
+    <div className="max-w-sm m-auto">
+      <Image src={image13} alt="Stall" className="   " />
+      <div className="flex justify-center">
+        <button className=" bg-vidi rounded-xl hover:opacity-90 mt-5 mb-10 animate-bounce">
+          <Link
+            href="https://wa.me/628112546265?text=Hai%20Admin%20VIDI%20Catering%2C%20Saya%20ingin%20bergabung%20di%20acara%20Free%20Food%20Tasting%20Flight%20Batch%202"
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-xl py-2 mx-8 flex"
+          >
+            Klik Untuk Bergabung
+          </Link>
+        </button>
       </div>
+      <Image src={image14} alt="Stall" className="mb-10" />
+      <Image src={image1} alt="Stall" className="   " />
+      <div className="flex justify-center">
+        <button className=" bg-vidi rounded-xl hover:opacity-90  ">
+          <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
+            Hubungi Kami
+          </Link>
+        </button>
+      </div>
+      <Image src={image2} alt="Stall" className="   " />
+      <Image src={image3} alt="Stall" className="-my-5" />
+      <div className="flex justify-center mt-5 mb-10">
+        <button className=" bg-vidi rounded-xl hover:opacity-90  ">
+          <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
+            Hubungi Kami
+          </Link>
+        </button>
+      </div>
+      <Image src={image4} alt="Stall" className="" />
+      <Image src={image8} alt="Stall" className="" />
+      <div className="flex justify-center mb-10">
+        <button className=" bg-vidi rounded-xl hover:opacity-90  ">
+          <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
+            Hubungi Kami
+          </Link>
+        </button>
+      </div>
+      <Image src={image5} alt="Stall" className="   " />
+      <Image src={image15} alt="Stall" className="   " />
+      <div className="flex justify-center mt-5 mb-10">
+        <button className=" bg-vidi rounded-xl hover:opacity-90  ">
+          <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 mx-8 flex">
+            Hubungi Kami
+          </Link>
+        </button>
+      </div>
+      <Image src={image16} alt="Stall" className="   " />
+      <Image src={image6} alt="Stall" className="" />
+      <Image src={image7} alt="Stall" className="" />
     </div>
   );
 };

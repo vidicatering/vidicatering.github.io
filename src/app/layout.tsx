@@ -24,6 +24,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${argent.variable}`}>
       <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC7VE7M22E"></script>
+        <script></script>
+        <Script src="/js/googleAnalytics.js" />
+        <SpeedInsights />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -51,10 +55,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <noscript>
           <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=418200921271699&ev=PageView&noscript=1" />
         </noscript>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC7VE7M22E"></script>
-        <script></script>
-        <Script src="/js/googleAnalytics.js" />
-        <SpeedInsights />
       </head>
       <body>
         <main>

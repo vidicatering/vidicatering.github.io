@@ -8,12 +8,13 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const pathname = usePathname();
   const isFoodTastingPage = pathname === "/food-tasting-flight";
   const isDashboardPage = pathname === "/dashboard";
-  const isCreatedFormPage = pathname === "/blog/create";
+  const isGsvPage = pathname === "/grha-sarina-vidi";
+  const isVidiPage = pathname === "/vidi-catering";
 
   return (
     <>
-      {!isFoodTastingPage && !isDashboardPage && !isCreatedFormPage && <Nav />}
-      {!isFoodTastingPage && !isDashboardPage && !isCreatedFormPage && <PopUp />}
+      {!isFoodTastingPage && !isDashboardPage && !isGsvPage && !isVidiPage && <Nav />}
+      {!isFoodTastingPage && !isDashboardPage && !isGsvPage && !isVidiPage && <PopUp />}
       {children}
     </>
   );
