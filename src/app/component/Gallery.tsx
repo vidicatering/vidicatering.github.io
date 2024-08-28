@@ -11,7 +11,7 @@ import Image11 from "/public/img/image11.webp";
 import Meeting from "/public/img/Meeting.webp";
 import Wisuda from "/public/img/Wisuda.webp";
 import Syukuran from "/public/img/Syukuran.webp";
-import hampers from "/public/img/hampers.webp";
+import anis from "/public/img/anis.webp";
 
 interface CustomImageProps {
   src: any;
@@ -23,7 +23,7 @@ const images: CustomImageProps[] = [
   { src: Buffet, alt: "Buffet" },
   { src: NasiKotak, alt: "Nasi Kotak" },
   { src: Image11, alt: "Tumpeng Mini" },
-  { src: hampers, alt: "Hampers" },
+  { src: anis, alt: "Hampers" },
   { src: Penglaris, alt: "Penglaris Heri T" },
   { src: Wedding, alt: "Wedding" },
   { src: Gathering, alt: "Gathering" },

@@ -37,12 +37,9 @@ const Nav = () => {
                         <Link href="/wedding-catering" className="block px-4 py-2 hover:text-vidi ">
                           Wedding Service
                         </Link>
-                        <a href="#" className="block px-4 py-2 hover:text-vidi ">
-                          Link2
-                        </a>
-                        <a href="#" className="block px-4 py-2 hover:text-vidi ">
-                          Link 3
-                        </a>
+                        <Link href="http://tumpengtiny.id" passHref target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:text-vidi ">
+                          Tumpeng Tiny
+                        </Link>
                       </div>
                     )}
                   </li>
