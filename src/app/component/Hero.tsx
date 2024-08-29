@@ -16,7 +16,7 @@ import Contact from "./Contact";
 import logo from "/public/img/iso_1.png";
 import Ballroom from "/public/img/ballroom.webp";
 import Testi from "./testimoni";
-import empatPuluh from "/public/img/40tahun.webp";
+import empatPuluh from "/public/img/ibuiim.webp";
 import image11 from "/public/img/image11.webp";
 import image12 from "/public/img/jaminanPangan.webp";
 import image13 from "/public/img/menu.webp";
@@ -101,7 +101,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="min-h-max flex justify-center items-center my-20 bg-gradient-to-t from-transparent via-bg_vidi to-transparent">
+      <div className="min-h-max flex justify-center items-center my-20 lg:my-40 bg-gradient-to-t from-transparent via-bg_vidi to-transparent">
         <div className="lg:max-w-8xl min-h-max w-full lg:mx-32 mx-10 py-12 lg:px-10 px-4 flex lg:flex-row flex-col lg:gap-32 gap-10 md:gap-20 items-center justify-center ">
           <div className="max-w-[550px]">
             <h1 className="font-bold text-6xl">40 Tahun Melayani Indonesia.</h1>
