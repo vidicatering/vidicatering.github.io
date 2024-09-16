@@ -26,7 +26,7 @@ const CreatePost = () => {
             <label className="mb-2">Konten</label>
           </p>
           <CKEditor
-            editor={ClassicEditor}
+            editor={ClassicEditor as any}
             data={editorContent} // Konten default dari state
             onChange={(event, editor) => {
               const data = editor.getData();
