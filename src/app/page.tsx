@@ -1,12 +1,12 @@
-import Nav from "./component/Nav";
-import Hero from "./component/Hero";
-import Footer from "./component/Footer";
-import Testi from "./component/testimoni";
-import Gallery from "./component/Gallery";
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import Testi from "./components/testimoni";
+import Gallery from "./components/Gallery";
 import React from "react";
 import Layout from "./layout";
-import PopUp from "./component/Popup";
-import Contact from "./component/Contact";
+import PopUp from "./components/Popup";
+import Contact from "./components/Contact";
 
 const Main = () => (
   <>

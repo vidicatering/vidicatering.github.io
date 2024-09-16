@@ -16,7 +16,7 @@ import ballroom from "/public/img/ballroom.webp";
 import umrah from "/public/img/umrah.webp";
 
 import Link from "next/link";
-import Footer from "../component/Footer";
+import Footer from "../components/Footer";
 
 const gsvPage = () => {
   return (

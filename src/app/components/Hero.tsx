@@ -47,7 +47,7 @@ const Hero = () => {
     <>
       <div className="h-screen bg-no-repeat bg-cover bg-[url('/img/BG3.webp')] md:bg-[url('/img/bg-hero.webp')] lg:bg-[url('/img/bg-hero.webp')] pt-20">
         <div className="h-full bg-gradient-to-t from-white to-transparent">
-          <div className="flex flex-col justify-center w-full space-y-2 h-full lg:px-32 md:px-32 px-10">
+          <div className="flex flex-col justify-center w-full space-y-2 h-full md:px-32 px-10 container">
             <h1 className="font-argent lg:text-6xl md:text-6xl text-vidi font-medium text-4xl">
               Memorable Event <span className="block text-brown">Memorable Catering</span>
             </h1>

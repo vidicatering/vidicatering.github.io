@@ -3,9 +3,9 @@
 
 import React from "react";
 import Image from "next/image";
-import Gallery from "../component/Gallery";
-import Contact from "../component/Contact";
-import Footer from "../component/Footer";
+import Gallery from "../components/Gallery";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import "react-alice-carousel/lib/alice-carousel.css";
 import logo from "/public/img/iso_1.png";
 import dynamic from "next/dynamic";

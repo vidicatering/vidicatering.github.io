@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/ckeditor.jsx", "src/app/component/create-form.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/ckeditor.jsx", "src/app/components/create-form.jsx", "src/app/dashboard/page.tsx", "src/app/components/sidebardemo.jsx"],
   "exclude": ["node_modules"]
 }
