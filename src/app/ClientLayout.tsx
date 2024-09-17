@@ -6,6 +6,9 @@ import PopUp from "./components/Popup";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  if (!pathname) {
+    return null; // Atau tampilkan spinner/loading
+  }
   const isFoodTastingPage = pathname === "/food-tasting-flight";
   const isDashboardPage = pathname === "/dashboard";
   const isAddPostPage = pathname.includes("/dashboard/");
