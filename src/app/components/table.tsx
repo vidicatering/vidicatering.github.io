@@ -1,3 +1,5 @@
+"use client";
+
 import { CiEdit } from "react-icons/ci";
 import { BsPlusCircleFill } from "react-icons/bs";
 import { MdOutlineDelete } from "react-icons/md";
