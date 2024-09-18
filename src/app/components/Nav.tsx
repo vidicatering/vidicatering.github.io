@@ -3,8 +3,6 @@ import Script from "next/script";
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
-import logo from "../../../public/img/vidi_logo.png";
 
 const Nav = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -16,7 +14,7 @@ const Nav = () => {
           <div className="flex items-center justify-between relative">
             <div className="">
               <a href="#home">
-                <Image src={logo} alt="Logo Vidi" className="w-36 m-auto" />
+                <img src="/img/vidi_logo.png" alt="Logo Vidi" className="w-36 m-auto" />
               </a>
             </div>
             <div className="flex items-center px-4 ">

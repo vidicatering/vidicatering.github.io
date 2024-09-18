@@ -18,7 +18,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   return (
     <>
       {!isFoodTastingPage && !isDashboardPage && !isGsvPage && !isAddPostPage && !isVidiPage && <Nav />}
-      {/* {!isFoodTastingPage && !isDashboardPage && !isAddPostPage && !isGsvPage && !isVidiPage && <PopUp />} */}
+      {!isFoodTastingPage && !isDashboardPage && !isAddPostPage && !isGsvPage && !isVidiPage && <PopUp />}
       {children}
     </>
   );
