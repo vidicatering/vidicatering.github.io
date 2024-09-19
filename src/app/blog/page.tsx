@@ -17,7 +17,7 @@ const BlogPage = async () => {
       <div className="container">
         <div className="w-full h-64 bg-bg_vidi mt-20 mb-10 rounded-xl">
           <div className="px-64 h-full flex flex-col justify-center text-center ">
-            <h2 className="uppercase font-medium text-gray-500 text-xl mb-2">Welcome To VIDI's Blog</h2>
+            <h2 className="uppercase font-medium text-gray-500 text-xl mb-2">Welcome To VIDI&apos;s Blog</h2>
             <h1 className="font-semibold text-4xl leading-tight">
               Craft narrative that ignite <span className="text-red-500">inspiration</span>, <span className="text-red-500">knowledge</span>, and <span className="text-red-500">entertainment</span>
             </h1>
