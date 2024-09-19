@@ -53,7 +53,7 @@ const Gallery: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-10 lg:mx-2 ">
           {shuffledImages.map((image, index) => (
             <div key={index} className="">
-              <Image src={image.src} alt={image.alt} className="rounded-lg " />
+              <Image src={image.src} alt={image.alt} className="rounded-xl" />
             </div>
           ))}
         </div>
