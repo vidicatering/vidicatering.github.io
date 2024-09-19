@@ -64,9 +64,9 @@ const CreatePost = () => {
         <div className="my-5">
           <label className="mr-5">Kategori</label>
           <select id="category" name="category" className="border focus:outline-bg_vidi px-5 py-2 rounded-md">
-            <option value="news">News</option>
-            <option value="tips">Tips</option>
-            <option value="resep">Resep</option>
+            <option value="News">News</option>
+            <option value="Tips">Tips</option>
+            <option value="Resep">Resep</option>
           </select>
           <label htmlFor="status" className="mx-5">
             Status

@@ -2,6 +2,7 @@ import Image from "next/image";
 
 type ArticleCardProps = {
   title: string;
+  content: string;
   imageSrc: string;
   category: string;
   dateUpload: string;
@@ -18,7 +19,7 @@ export const ArticleCardLeft = ({ title, imageSrc, category, dateUpload }: Artic
           <p className="text-sm">| {dateUpload}</p>
         </div>
       </div>
-      <Image src={imageSrc} alt={title} width={200} height={100} className="rounded max-h-80 w-full object-cover shadow-xl" />
+      <Image src={imageSrc} alt={title} width={1920} height={720} className="rounded max-h-80 w-full object-cover shadow-xl" />
     </div>
   );
 };
@@ -34,8 +35,54 @@ export const ArticleCardRight = ({ title, imageSrc, category, dateUpload }: Arti
           <p className="text-sm">| {dateUpload}</p>
         </div>
       </div>
-      <div className=" m-0 bg-purple-300 w-72 ">
-        <Image src={imageSrc} alt={title} width={200} height={100} className="rounded h-40 w-full object-cover shadow-xl" />
+      <div className=" m-0 w-72 ">
+        <Image src={imageSrc} alt={title} width={1920} height={720} className="h-40 w-full object-cover rounded-xl shadow-xl" />
+      </div>
+    </div>
+  );
+};
+
+export const ArticleCardLatest = ({ title, content, imageSrc, category, dateUpload }: ArticleCardProps) => {
+  const truncateContent = (text: string, wordLimit: number) => {
+    const words = text.split(" ");
+    return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
+  };
+
+  return (
+    <div className=" mb-4 grid grid-cols-2 gap-14 p-0 mx-0 justify-center items-center ">
+      <div className=" m-0 ">
+        <Image src={imageSrc} alt={title} width={1920} height={720} className="rounded-2xl h-[350px] w-full object-cover shadow-xl" />
+      </div>
+      <div className="">
+        <h1 className="text-4xl font-medium mb-3 leading-tight ">{title}</h1>
+        <p className="text-xl mt-5 line-clamp-3 tracking-wide" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="flex gap-1 mt-5">
+          <p className="text-lg text-red-500 font-medium">{category}</p>
+          <p className="text-lg">| {dateUpload}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const ArticleCardSmall = ({ title, content, imageSrc, category, dateUpload }: ArticleCardProps) => {
+  const truncateContent = (text: string, wordLimit: number) => {
+    const words = text.split(" ");
+    return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
+  };
+
+  return (
+    <div className=" mb-4  p-0 mx-0 justify-center items-center ">
+      <div className=" m-0 ">
+        <Image src={imageSrc} alt={title} width={1920} height={720} className="rounded-2xl shadow-lg h-64 w-full object-cover sm:h-80 lg:h-72" />
+      </div>
+      <div className="">
+        <h1 className="mt-4 text-lg font-medium text-gray-900 sm:text-xl line-clamp-2">{title}</h1>
+        <p className="mt-2 max-w-sm text-gray-700 line-clamp-3 tracking-wide" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="flex gap-1 mt-5">
+          <p className="text-lg text-red-500 font-medium">{category}</p>
+          <p className="text-lg">| {dateUpload}</p>
+        </div>
       </div>
     </div>
   );

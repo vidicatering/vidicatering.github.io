@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <>
       <Script src="/js/script.js" />
-      <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 my-0 bg-white">
+      <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 my-0 bg-white justify-center">
         <div className="container lg:mx-28 md:mx-20 mx-5">
           <div className="flex items-center justify-between relative">
             <div className="">
@@ -51,6 +51,11 @@ const Nav = () => {
                   <li className="group">
                     <Link href="/about-us" className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi">
                       About Us
+                    </Link>
+                  </li>
+                  <li className="group">
+                    <Link href="/blog" className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi">
+                      Blog
                     </Link>
                   </li>
                   <li className="group">
