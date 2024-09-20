@@ -5,10 +5,11 @@ import { ArticleCardLatest, ArticleCardSmall } from "../components/article-card"
 import { Blog } from "../../../lib/data";
 import { formatDate } from "../../../lib/utils";
 import Loader from "../components/loading";
+import Link from "next/link";
 
-const BlogPage = () => {
-  const [blogs, setBlogs] = useState<Blog[]>([]); // Tentukan tipe Blog[]
-  const [loading, setLoading] = useState(true); // State untuk loading
+const BlogPage = ({ id }: { id: string }) => {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -19,14 +20,13 @@ const BlogPage = () => {
       } catch (error) {
         console.error("Error fetching blogs:", error);
       } finally {
-        setLoading(false); // Setelah fetch selesai, matikan status loading
+        setLoading(false);
       }
     };
 
     fetchBlogs();
   }, []);
 
-  // Placeholder untuk Lazy Loading
   if (loading) {
     return (
       <div className="min-h-screen flex justify-center items-center">
@@ -49,9 +49,16 @@ const BlogPage = () => {
         </div>
       </div>
       <div className="">
-        {latestBlog && ( // Memastikan latestBlog tidak undefined
+        {latestBlog && (
           <div key={latestBlog.id}>
-            <ArticleCardLatest title={latestBlog.title} content={latestBlog.content} imageSrc={latestBlog.image} category={latestBlog.category} dateUpload={formatDate(latestBlog.createdAt.toString())} />
+            <ArticleCardLatest
+              id={latestBlog.id} // Pass the blog ID
+              title={latestBlog.title}
+              content={latestBlog.content}
+              imageSrc={latestBlog.image}
+              category={latestBlog.category}
+              dateUpload={formatDate(latestBlog.createdAt.toString())}
+            />
           </div>
         )}
       </div>
@@ -64,7 +71,7 @@ const BlogPage = () => {
           {recentBlogs.map((blog, index) => (
             <div key={blog.id} className="w-72 ">
               <div className="">
-                <ArticleCardSmall title={blog.title} content={blog.content} imageSrc={blog.image} category={blog.category} dateUpload={formatDate(blog.createdAt.toString())} />
+                <ArticleCardSmall id={blog.id} title={blog.title} content={blog.content} imageSrc={blog.image} category={blog.category} dateUpload={formatDate(blog.createdAt.toString())} />
               </div>
             </div>
           ))}
@@ -79,7 +86,7 @@ const BlogPage = () => {
           {newsBlogs.map((blog, index) => (
             <div key={blog.id} className="w-72 ">
               <div className="">
-                <ArticleCardSmall title={blog.title} content={blog.content} imageSrc={blog.image} category={blog.category} dateUpload={formatDate(blog.createdAt.toString())} />
+                <ArticleCardSmall id={blog.id} title={blog.title} content={blog.content} imageSrc={blog.image} category={blog.category} dateUpload={formatDate(blog.createdAt.toString())} />
               </div>
             </div>
           ))}

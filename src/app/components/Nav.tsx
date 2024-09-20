@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <>
       <Script src="/js/script.js" />
-      <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 my-0 bg-white justify-center">
+      <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 my-0 bg-white justify-center border-b border-slate-100">
         <div className="container  mx-5">
           <div className="flex items-center justify-between relative">
             <div className="">
