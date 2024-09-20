@@ -7,7 +7,7 @@ import { formatDate } from "../../../lib/utils";
 import Loader from "../components/loading";
 import Link from "next/link";
 
-const BlogPage = ({ id }: { id: string }) => {
+const BlogPage = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
 
