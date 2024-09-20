@@ -8,7 +8,7 @@ import { EditButton, DeleteButton } from "./button";
 const PostList = async () => {
   const blogs = await getBlogs();
   return (
-    <div className="container mt-10">
+    <div className="container mt-10 mb-40">
       <div className="flex flex-row justify-between items-center mb-10">
         <h1 className="text-3xl font-bold mx-auto uppercase">Table List</h1>
       </div>

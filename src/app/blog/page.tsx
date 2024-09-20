@@ -1,18 +1,30 @@
-import { ArticleCardLatest, ArticleCardLeft, ArticleCardRight, ArticleCardSmall } from "../components/article-card";
-import anis from "../../../public/img/anis.webp";
-import { getBlogs } from "../../../lib/data";
+"use client";
+
+import { useEffect, useState } from "react";
+import { ArticleCardLatest, ArticleCardSmall } from "../components/article-card";
+import { Blog, getBlogs } from "../../../lib/data"; // Pastikan tipe Blog diimport
 import { formatDate } from "../../../lib/utils";
 
-const BlogPage = async () => {
-  const blogs = await getBlogs();
+const BlogPage = () => {
+  const [blogs, setBlogs] = useState<Blog[]>([]); // Tentukan tipe Blog[]
 
-  const sortedBlogs = blogs.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch("/api/blog", { cache: "no-store" });
+        const blogsData: Blog[] = await res.json(); // Tentukan tipe sebagai Blog[]
+        setBlogs(blogsData.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()));
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    };
 
-  // Mengambil blog terbaru dan 3 blog terbaru setelahnya
-  const latestBlog = sortedBlogs[0];
-  const recentBlogs = sortedBlogs.slice(1, 5);
-  const newsBlogs = sortedBlogs.filter((blog) => blog.category === "Tips").slice(0, 4);
+    fetchBlogs();
+  }, []);
 
+  const latestBlog = blogs[0];
+  const recentBlogs = blogs.slice(1, 5);
+  const newsBlogs = blogs.filter((blog) => blog.category === "Tips").slice(0, 4);
   return (
     <div className="container">
       <div className="w-full h-64 bg-bg_vidi mt-20 mb-10 rounded-xl">

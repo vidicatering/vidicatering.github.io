@@ -1,6 +1,17 @@
 import prisma from "./prisma";
 
-export const getBlogs = async () => {
+export type Blog = {
+  id: string;
+  title: string;
+  content: string;
+  createdAt: Date;
+  updatedAt: Date;
+  category: string;
+  status: string;
+  image: string;
+};
+
+export const getBlogs = async (): Promise<Blog[]> => {
   try {
     const blogs = await prisma.blog.findMany();
     return blogs;
