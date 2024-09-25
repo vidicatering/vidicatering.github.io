@@ -20,7 +20,7 @@ type BlogDetailProps = {
 };
 
 const BlogDetail = async ({ params }: BlogDetailProps) => {
-  const blogs: Blog[] = await getBlogs(); // Fetch all blogs
+  const blogs: Blog[] = await getBlogs("", 1); // Fetch all blogs
   const blog = blogs.find((b) => b.id === params.id); // Find blog with matching ID
   const newsBlogs = blogs.slice(0, 8);
 
