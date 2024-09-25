@@ -11,9 +11,23 @@ export type Blog = {
   image: string;
 };
 
-export const getBlogs = async (): Promise<Blog[]> => {
+export const getBlogs = async (
+  query: string,
+  currentPage: number
+): Promise<Blog[]> => {
   try {
-    const blogs = await prisma.blog.findMany();
+    const blogs = await prisma.blog.findMany({
+      where: {
+        OR: [
+          {
+            title: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+        ],
+      },
+    });
     return blogs;
   } catch (error) {
     console.error("Error fetching blogs:", error);

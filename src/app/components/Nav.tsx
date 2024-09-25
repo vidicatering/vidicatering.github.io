@@ -14,53 +14,97 @@ const Nav = () => {
           <div className="flex items-center justify-between relative">
             <div className="">
               <a href="#home">
-                <img src="/img/vidi_logo.png" alt="Logo Vidi" className="w-36 m-auto" />
+                <img
+                  src="/img/vidi_logo.png"
+                  alt="Logo Vidi"
+                  className="w-36 m-auto"
+                />
               </a>
             </div>
             <div className="flex items-center px-4 ">
-              <button id="hamburger" name="hamburger" type="button" className="block absolute right-4 lg:hidden ">
+              <button
+                id="hamburger"
+                name="hamburger"
+                type="button"
+                className="block absolute right-4 lg:hidden "
+              >
                 <span className="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
                 <span className="hamburger-line transition duration-300 ease-in-out "></span>
                 <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
               </button>
-              <nav id="nav-menu" className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[320px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+              <nav
+                id="nav-menu"
+                className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[320px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+              >
                 <ul className="block lg:flex">
                   <li className="group">
-                    <Link href="/" className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi">
+                    <Link
+                      href="/"
+                      className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi"
+                    >
                       Beranda
                     </Link>
                   </li>
-                  <li onClick={() => setDropdownOpen(!dropdownOpen)} className="group">
-                    <button className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi ">Catering Service</button>
+                  <li
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    className="group"
+                  >
+                    <button className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi ">
+                      Catering Service
+                    </button>
                     {dropdownOpen && (
                       <div className="absolute  mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 ">
-                        <Link href="/wedding-catering" className="block px-4 py-2 hover:text-vidi ">
+                        <Link
+                          href="/wedding-catering"
+                          className="block px-4 py-2 hover:text-vidi "
+                        >
                           Wedding Service
                         </Link>
-                        <Link href="http://tumpengtiny.id" passHref target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:text-vidi ">
+                        <Link
+                          href="http://tumpengtiny.id"
+                          passHref
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2 hover:text-vidi "
+                        >
                           Tumpeng Tiny
                         </Link>
                       </div>
                     )}
                   </li>
                   <li className="group">
-                    <Link href="/ballroom-convention-hall" className="block md:mx-5 mx-8 py-2 hover:text-vidi ">
+                    <Link
+                      href="/ballroom-convention-hall"
+                      className="block md:mx-5 mx-8 py-2 hover:text-vidi "
+                    >
                       Ballroom & Convention Hall
                     </Link>
                   </li>
                   <li className="group">
-                    <Link href="/about-us" className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi">
+                    <Link
+                      href="/about-us"
+                      className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi"
+                    >
                       About Us
                     </Link>
                   </li>
                   <li className="group">
-                    <Link href="/blog" className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi">
+                    <Link
+                      href="/blog"
+                      className="text-base py-2 md:mx-5 mx-8 flex group-hover:text-vidi"
+                    >
                       Blog
                     </Link>
                   </li>
                   <li className="group">
                     <button className=" bg-vidi rounded-xl hover:opacity-90 mx-4 ">
-                      <Link href="https://api.whatsapp.com/send?phone=628112546265" passHref target="_blank" rel="noopener noreferrer" className="text-white text-xl py-2 md:mx-5 mx-8 flex">
+                      <Link
+                        href="https://api.whatsapp.com/send?phone=628112546265"
+                        passHref
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white text-xl py-2 md:mx-5 mx-8 flex"
+                      >
                         Hubungi Kami
                       </Link>
                     </button>

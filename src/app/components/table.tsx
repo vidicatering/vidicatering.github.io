@@ -4,15 +4,24 @@ import { MdOutlineDelete } from "react-icons/md";
 import { getBlogs } from "../../../lib/data";
 import { formatDate } from "../../../lib/utils";
 import { EditButton, DeleteButton } from "./button";
+import Search from "../components/search";
 
-const PostList = async () => {
-  const blogs = await getBlogs();
+const PostList = async ({
+  query,
+  currentPage,
+}: {
+  query: string;
+  currentPage: number;
+}) => {
+  const blogs = await getBlogs(query, currentPage);
   return (
     <div className="container mt-10 mb-40">
       <div className="flex flex-row justify-between items-center mb-10">
         <h1 className="text-3xl font-bold mx-auto uppercase">Table List</h1>
       </div>
+
       <div className="left flex gap-3">
+        <Search />
         <button className="flex bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-indigo-700 duration-700 ">
           Add Post{" "}
           <span className="pl-2 m-auto">
@@ -48,8 +57,12 @@ const PostList = async () => {
             {blogs.map((blog, index) => (
               <tr key={blog.id}>
                 <td className="px-5 py-2">{blog.title}</td>
-                <td className="px-5 py-2">{formatDate(blog.createdAt.toString())}</td>
-                <td className="px-5 py-2">{formatDate(blog.updatedAt.toString())}</td>
+                <td className="px-5 py-2">
+                  {formatDate(blog.createdAt.toString())}
+                </td>
+                <td className="px-5 py-2">
+                  {formatDate(blog.updatedAt.toString())}
+                </td>
                 <td className="px-5 py-2">{blog.category}</td>
                 <td className="px-5 py-2">
                   <button>
