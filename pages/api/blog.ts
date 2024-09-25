@@ -1,10 +1,14 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { getBlogs } from "../../lib/data";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   try {
     if (req.method === "GET") {
-      const blogs = await getBlogs();
+      const { query = "", page = 1 } = req.query; // Mengambil query dan page dari query parameter
+      const blogs = await getBlogs(query as string, parseInt(page as string)); // Mengirim argumen yang sesuai
       res.status(200).json(blogs); // Mengembalikan data blogs sebagai JSON
     } else {
       res.setHeader("Allow", ["GET"]);
