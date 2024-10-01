@@ -58,15 +58,6 @@ const FormLogin = () => {
       </div>
 
       <LoginButton />
-
-      <p className="text-sm font-light text-gray-500">
-        Don&apos;t have an account yet?
-        <Link href="/register">
-          <span className="font-medium pl-1 text-blue-600 hover:text-blue-700">
-            Sign Up here
-          </span>
-        </Link>
-      </p>
     </form>
   );
 };

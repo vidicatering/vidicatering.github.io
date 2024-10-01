@@ -87,8 +87,8 @@ const CreatePost = () => {
             name="status"
             className="border focus:outline-bg_vidi px-5 py-2 rounded-md"
           >
-            <option value="draft">Draft</option>
-            <option value="active">Aktif</option>
+            <option value="Draft">Draft</option>
+            <option value="Active">Aktif</option>
           </select>
         </div>
 
