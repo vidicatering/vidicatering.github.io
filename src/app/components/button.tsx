@@ -50,11 +50,18 @@ export const SubmitButton = ({ label }: { label: string }) => {
   const { pending } = useFormStatus();
   return (
     <button
-      className={clsx("px-6 py-2 rounded-xl bg-vidi text-white font-bold transition duration-200 hover:bg-white hover:text-vidi border-2 border-transparent hover:border-vidi", { "opacity-50 cursor-progress": pending })}
+      className={clsx(
+        "px-6 py-2 rounded-xl bg-vidi text-white font-bold transition duration-200 hover:bg-white hover:text-vidi border-2 border-transparent hover:border-vidi",
+        { "opacity-50 cursor-progress": pending }
+      )}
       type="submit"
       disabled={pending}
     >
-      {label === "upload" ? <>{pending ? "Uploading..." : "Upload"}</> : <>{pending ? "updating..." : "Update"}</>}
+      {label === "upload" ? (
+        <>{pending ? "Uploading..." : "Upload"}</>
+      ) : (
+        <>{pending ? "updating..." : "Update"}</>
+      )}
     </button>
   );
 };
@@ -76,5 +83,31 @@ export const DeleteButton = ({ id }: { id: string }) => {
         <MdOutlineDelete size={30} color="red" />
       </button>
     </form>
+  );
+};
+
+export const LoginButton = () => {
+  const { pending } = useFormStatus();
+  return (
+    <button
+      type="submit"
+      disabled={pending}
+      className="w-full text-white bg-blue-700 font-medium rounded-lg px-5 py-2.5 text-center uppercase hover:bg-blue-800"
+    >
+      {pending ? "Authenticating..." : "Sign In"}
+    </button>
+  );
+};
+
+export const RegisterButton = () => {
+  const { pending } = useFormStatus();
+  return (
+    <button
+      type="submit"
+      disabled={pending}
+      className="w-full text-white bg-blue-700 font-medium rounded-lg px-5 py-2.5 text-center uppercase hover:bg-blue-800"
+    >
+      {pending ? "Registering..." : "Register"}
+    </button>
   );
 };

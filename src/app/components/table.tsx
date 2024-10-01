@@ -49,6 +49,9 @@ const PostList = async ({
                 <span>Status</span>
               </th>
               <th className="px-5 py-2">
+                <span>Author</span>
+              </th>
+              <th className="px-5 py-2">
                 <span>Action</span>
               </th>
             </tr>
@@ -69,6 +72,7 @@ const PostList = async ({
                     <span className="text-green-500">{blog.status}</span>
                   </button>
                 </td>
+                <td className="px-5 py-2">{blog.user}</td>
                 <td className="px-5 py-2 flex gap-4 items-center justify-center">
                   <EditButton id={blog.id} />
                   <DeleteButton id={blog.id} />
