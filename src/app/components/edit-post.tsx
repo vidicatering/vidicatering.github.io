@@ -17,7 +17,13 @@ const EditPost = ({ blog }: { blog: Blog }) => {
       <form action={formAction}>
         <div className="">
           <label className="mb-5">Judul</label>
-          <input type="text" name="title" placeholder="Judul Postingan" className="border w-full px-5 py-3 focus:outline-bg_vidi rounded-md" defaultValue={blog.title} />
+          <input
+            type="text"
+            name="title"
+            placeholder="Judul Postingan"
+            className="border w-full px-5 py-3 focus:outline-bg_vidi rounded-md"
+            defaultValue={blog.title}
+          />
           <div aria-live="polite" aria-atomic="true">
             <p className="text-sm text-red-500 mt-2">{state?.error?.title}</p>
           </div>
@@ -45,7 +51,12 @@ const EditPost = ({ blog }: { blog: Blog }) => {
         </div>
         <div className=" my-5">
           <label className="mr-5">Kategori</label>
-          <select id="category" name="category" className="border focus:outline-bg_vidi px-5 py-2 rounded-md" defaultValue={blog.category}>
+          <select
+            id="category"
+            name="category"
+            className="border focus:outline-bg_vidi px-5 py-2 rounded-md"
+            defaultValue={blog.category}
+          >
             <option value="News">News</option>
             <option value="Tips">Tips</option>
             <option value="Resep">Resep</option>
@@ -53,14 +64,23 @@ const EditPost = ({ blog }: { blog: Blog }) => {
           <label htmlFor="status" className="mx-5">
             Status
           </label>
-          <select id="status" name="status" className="border focus:outline-bg_vidi px-5 py-2 rounded-md" defaultValue={blog.status}>
+          <select
+            id="status"
+            name="status"
+            className="border focus:outline-bg_vidi px-5 py-2 rounded-md"
+            defaultValue={blog.status}
+          >
             <option value="Draft">Draft</option>
             <option value="Active">Aktif</option>
           </select>
         </div>
         <div className="mb-4 pt-2 flex flex-col max-w-md">
           <label className="mb-2">Upload Image</label>
-          <input type="file" name="image" className="file:py-2 file:px-4 file:mr-4 file:rounded-sm file:border-0 file:bg-gray-200 hover:file:bg-gray-300 file:cursor-pointer border border-gray-400" />
+          <input
+            type="file"
+            name="image"
+            className="file:py-2 file:px-4 file:mr-4 file:rounded-sm file:border-0 file:bg-gray-200 hover:file:bg-gray-300 file:cursor-pointer border border-gray-400"
+          />
           <div aria-live="polite" aria-atomic="true">
             <p className="text-sm text-red-500 mt-2">{state?.error?.image}</p>
           </div>

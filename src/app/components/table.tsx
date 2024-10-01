@@ -59,7 +59,7 @@ const PostList = async ({
           <tbody className=" text-center border">
             {blogs.map((blog, index) => (
               <tr key={blog.id}>
-                <td className="px-5 py-2">{blog.title}</td>
+                <td className="px-2 py-2 line-clamp-1">{blog.title}</td>
                 <td className="px-5 py-2">
                   {formatDate(blog.createdAt.toString())}
                 </td>

@@ -7,7 +7,7 @@ const Sidebar = async () => {
   const session = await auth();
 
   return (
-    <div className="min-w-72">
+    <div className="sticky min-w-56">
       <div className="flex flex-col h-screen justify-between bg-white">
         <div className="px-4 py-6">
           <Image src={logo} alt="Logo Vidi" className="w-36 ml-3" />

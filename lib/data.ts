@@ -18,11 +18,11 @@ export const getBlogs = async (
   query: string,
   currentPage: number
 ): Promise<Blog[]> => {
-  const offset = (currentPage - 1) * ITEMS_PER_PAGE;
+  // const offset = (currentPage - 1) * ITEMS_PER_PAGE;
   try {
     const blogs = await prisma.blog.findMany({
-      skip: offset,
-      take: ITEMS_PER_PAGE,
+      // skip: offset,
+      // take: ITEMS_PER_PAGE,
       where: {
         OR: [
           {
