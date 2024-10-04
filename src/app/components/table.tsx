@@ -1,7 +1,7 @@
 import { CiEdit } from "react-icons/ci";
 import { BsPlusCircleFill } from "react-icons/bs";
 import { MdOutlineDelete } from "react-icons/md";
-import { getBlogs } from "../../../lib/data";
+import { getBlogsForDashboard } from "../../../lib/data";
 import { formatDate } from "../../../lib/utils";
 import { EditButton, DeleteButton } from "./button";
 import Search from "../components/search";
@@ -13,9 +13,12 @@ const PostList = async ({
   query: string;
   currentPage: number;
 }) => {
-  const blogs = await getBlogs(query, currentPage);
+  const blogs = await getBlogsForDashboard(query, currentPage);
+  blogs.sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
   return (
-    <div className="container mt-10 mb-40">
+    <div className="container mt-10 mb-4">
       <div className="flex flex-row justify-between items-center mb-10">
         <h1 className="text-3xl font-bold mx-auto uppercase">Table List</h1>
       </div>
@@ -59,7 +62,7 @@ const PostList = async ({
           <tbody className=" text-center border">
             {blogs.map((blog, index) => (
               <tr key={blog.id}>
-                <td className="px-2 py-2 line-clamp-1">{blog.title}</td>
+                <td className="px-2 w-80 line-clamp-1">{blog.title}</td>
                 <td className="px-5 py-2">
                   {formatDate(blog.createdAt.toString())}
                 </td>

@@ -1,6 +1,6 @@
 import prisma from "./prisma";
 
-const ITEMS_PER_PAGE = 5;
+const ITEMS_PER_PAGE = 6;
 
 export type Blog = {
   id: string;
@@ -60,28 +60,77 @@ export const getBlogs = async (
     throw new Error("Failed to fetch blog data");
   }
 };
+export const getBlogsForDashboard = async (
+  query: string,
+  currentPage: number
+): Promise<Blog[]> => {
+  const offset = (currentPage - 1) * ITEMS_PER_PAGE;
+  try {
+    const blogs = await prisma.blog.findMany({
+      skip: offset,
+      take: ITEMS_PER_PAGE,
+      where: {
+        OR: [
+          {
+            title: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+        ],
+      },
+      orderBy: {
+        createdAt: "desc", // Mengurutkan berdasarkan tanggal terbaru
+      },
+      select: {
+        id: true,
+        title: true,
+        content: true,
+        createdAt: true,
+        updatedAt: true,
+        category: true,
+        status: true,
+        image: true,
+        user: {
+          select: {
+            name: true, // Ambil hanya nama dari relasi user
+          },
+        },
+      },
+    });
+    const formattedBlogs = blogs.map((blog) => ({
+      ...blog,
+      user: blog.user.name || "Unknown", // Jika user.name null, beri default 'Unknown'
+    }));
 
-// export const getBlogPages = async (query: string): Promise<Blog[]> => {
-//   try {
-//     const blogs = await prisma.blog.findMany({
-//       where: {
-//         OR: [
-//           {
-//             title: {
-//               contains: query,
-//               mode: "insensitive",
-//             },
-//           },
-//         ],
-//       },
-//     });
-//     const totalPages = Math.ceil(Number(blogs) / ITEMS_PER_PAGE);
-//     return totalPages;
-//   } catch (error) {
-//     console.error("Error fetching blogs:", error);
-//     throw new Error("Failed to fetch blog data");
-//   }
-// };
+    return formattedBlogs;
+  } catch (error) {
+    console.error("Error fetching blogs:", error);
+    throw new Error("Failed to fetch blog data");
+  }
+};
+
+export const getBlogPages = async (query: string) => {
+  try {
+    const blogs = await prisma.blog.count({
+      where: {
+        OR: [
+          {
+            title: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+        ],
+      },
+    });
+    const totalPages = Math.ceil(Number(blogs) / ITEMS_PER_PAGE);
+    return totalPages;
+  } catch (error) {
+    console.error("Error fetching blogs:", error);
+    throw new Error("Failed to fetch blog data");
+  }
+};
 
 export const getBlogsById = async (id: string) => {
   try {

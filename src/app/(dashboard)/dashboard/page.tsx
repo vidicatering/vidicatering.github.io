@@ -1,12 +1,13 @@
-import Sidebar from "../../components/ui/sidebar";
-//import CreatePost from "./form";
 import PostList from "../../components/table";
 import { Metadata } from "next";
+import { getBlogPages } from "../../../../lib/data";
+import Pagination from "../../components/pagination";
+
 export const metadata: Metadata = {
   title: "Dashboard",
 };
 
-const Dashboard = ({
+const Dashboard = async ({
   searchParams,
 }: {
   searchParams?: {
@@ -17,9 +18,12 @@ const Dashboard = ({
   const query = searchParams?.query || "";
   const currentPage = Number(searchParams?.page) || 1;
 
+  const totalPages = await getBlogPages(query);
+
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full flex flex-col justify-center items-center">
       <PostList query={query} currentPage={currentPage} />
+      <Pagination totalPages={totalPages} />
     </div>
   );
 };
