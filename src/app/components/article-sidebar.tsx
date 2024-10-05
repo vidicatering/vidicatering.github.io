@@ -10,7 +10,7 @@ type BlogDetailProps = {
 
 const ArticleSidebar = async () => {
   const blogs: Blog[] = await getBlogs("", 1); // Fetch all blogsFind blog with matching ID
-  const newsBlogs = blogs.slice(0, 8);
+  const newsBlogs = blogs.slice(0, 8).filter((blog) => blog.status !== "Draft");
 
   return (
     <aside className="w-[650px] border-l pl-10 ml-10">

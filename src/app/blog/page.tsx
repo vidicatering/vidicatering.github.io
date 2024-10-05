@@ -24,19 +24,22 @@ const BlogPage = () => {
       try {
         const res = await fetch("/api/blog", { cache: "no-store" });
         const blogsData: Blog[] = await res.json();
-        setBlogs(
-          blogsData.sort(
+
+        // Filter out blogs with status 'draft'
+        const filteredBlogs = blogsData
+          .filter((blog) => blog.status !== "Draft")
+          .sort(
             (a, b) =>
               new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-          )
-        );
+          );
+
+        setBlogs(filteredBlogs);
       } catch (error) {
         console.error("Error fetching blogs:", error);
       } finally {
         setLoading(false);
       }
     };
-
     fetchBlogs();
   }, []);
 
